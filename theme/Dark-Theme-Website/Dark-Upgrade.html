@@ -20,7 +20,7 @@
           <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
           <header class="flex relative flex-col justify-center px-8 py-4 w-full min-h-[80px] max-md:px-5 max-md:max-w-full">
             <div class="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[129px]" />
+              <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[229px]" />
               <nav class="flex gap-2.5 items-center self-stretch my-auto min-w-[240px]">
                 <img loading="lazy"  src="/assests/chat-user.png" alt="Navigation Icon" class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]" />
                 <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid">
@@ -35,17 +35,38 @@
           <main style="background: rgba(17, 24, 39, 0.7);" class="flex relative  border rounded-2xl border-transparent flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full">
             <div class="flex md:px-0 lg:px-20  flex-col items-center w-full max-md:max-w-full">
                 <div class="flex flex-col justify-center pt-16 max-w-full w-[862px]">
-                  <div style="border-radius: var(--Corner-Full, 1000px);
-                  border: 2px solid #F5DC90;
-                  background: radial-gradient(34.62% 40.98% at 50% 50%, rgba(153, 122, 19, 0.70) 0%, rgba(219, 189, 92, 0.00) 100%), linear-gradient(309deg, #BB912F 13.31%, #FEF399 50.31%, #C59D37 85%), #FFF; "
-                    class="flex flex-col justify-center items-center self-center bg-white h-[141px] min-h-[141px] rounded-[1000px] w-[141px]"
+                  <div 
+                    class="flex flex-col justify-center items-center self-center bg-transparent h-[141px] min-h-[141px] w-[141px]"
                   >
-                    <img 
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/c71f2bc171d04710e66ef6614182187e0cbb1a87dc484a49318a5bfec31aa5e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                      alt="Premium Upgrade Icon"
-                      class="object-contain pt-5 pe-5 me-3 mt-5 aspect-[1.12] fill-gray-50 w-[200px]"
-                    />
+                  <div style="position: relative; 
+                  width: 126px; 
+                  height: 126px; 
+                  border-radius: 50%; 
+                  overflow: hidden; 
+                  background-color: transparent;"> <!-- This ensures the circle -->
+        <img style="width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover; /* Ensures the image fits within the circle */
+                    position: relative; 
+                    z-index: 1;" 
+             loading="lazy" 
+             src="/assests/Logo-bot-removebg-preview.png" 
+             alt="AI avatar"
+             class="object-contain shrink-0">
+        
+        <!-- White background applied to the center only -->
+        <div style="position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70%; /* Adjust as needed */
+                    height: 70%; /* Adjust as needed */
+                    background-color: white;
+                    border-radius: 50%;
+                    z-index: 0;"></div>
+      </div>
+      
                   </div>
                   <h1
                     class="mt-4 w-full text-4xl font-medium  tracking-tight text-center text-white max-md:max-w-full"
