@@ -17,9 +17,9 @@
     
     <section class="flex flex-col justify-center py-4 ">
 
-        <div class="flex my-5 px-5 flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
+        <div class="flex mb-5 px-5 flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
       
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/99d9d9299bcd1fc5cd423a870bc5c53ad9dbd4d2708231a46e7a8181a5de10e2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[129px]" />
+          <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[229px]" />
       
           <nav class="flex gap-2.5 self-stretch my-auto">
       
@@ -82,12 +82,12 @@
 
 
 
-          <main style="background: rgba(17, 24, 39, 0.7);"  class="flex relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full border-solid  rounded-r-xl">
+          <main style="background: rgba(17, 24, 39, 0.7);"  class="flex relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full border-solid  rounded-xl">
 
 
 
 <!-- Sidebar (acts as an overlay on mobile) -->
-<aside id="mobile-sidebar" class="fixed bg-gray-900 inset-y-0 left-0 z-40 bg-gray-100 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:relative  border-solid  rounded-l-xl">
+<aside id="mobile-sidebar" class="fixed bg-gray-900 inset-y-0 left-0 z-40 bg-gray-100 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:relative  border-solid  rounded-xl">
   <!-- Sidebar container with scroll functionality for all screen sizes -->
   <div class="flex flex-col w-[100%] ml-0 h-full ">
     <div class="flex relative max-md:mt-7">
@@ -177,7 +177,7 @@
                 <article class="flex flex-col items-center px-2.5 pt-9 pb-2.5 bg-green-500 rounded-lg aspect-square">
                   <div class="flex flex-col w-full">
                     <div class="flex flex-col w-full text-white">
-                      <h3 class="text-lg font-bold tracking-tight leading-loose">
+                      <h3 class="text-lg font-bold tracking-tight leading-7">
                         Digital Companionship
                       </h3>
                       <p class="mt-1.5 text-xs font-medium leading-4">
@@ -231,13 +231,35 @@
 
                          <!-- Bot Message (Left Aligned) -->
                          <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
-                          <img style="width: 46px;
-                          height: 46px;"
-                            loading="lazy"
-                            src="/assests/chat-bot.png"
-                            alt="AI avatar"
-                            class="object-contain shrink-0 "
-                          />
+                          <div style="position: relative; 
+                          width: 46px; 
+                          height: 46px; 
+                          border-radius: 50%; 
+                          overflow: hidden; 
+                          background-color: transparent;"> <!-- This ensures the circle -->
+                <img style="width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: cover; /* Ensures the image fits within the circle */
+                            position: relative; 
+                            z-index: 1;" 
+                     loading="lazy" 
+                     src="/assests/Logo-bot-removebg-preview.png" 
+                     alt="AI avatar"
+                     class="object-contain shrink-0">
+                
+                <!-- White background applied to the center only -->
+                <div style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%; /* Adjust as needed */
+                            height: 70%; /* Adjust as needed */
+                            background-color: white;
+                            border-radius: 50%;
+                            z-index: 0;"></div>
+              </div>
+              
                           <p style="width: 647px;"
                             class="flex flex-col text-left  bg-transparent text-white rounded-2xl "
                           >
@@ -263,13 +285,35 @@
                   
                       <!-- Bot Message (Left Aligned) -->
                       <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
-                        <img style="width: 46px;
-                        height: 46px;"
-                          loading="lazy"
-                          src="/assests/chat-bot.png"
-                          alt="AI avatar"
-                          class="object-contain shrink-0 "
-                        />
+                        <div style="position: relative; 
+                        width: 46px; 
+                        height: 46px; 
+                        border-radius: 50%; 
+                        overflow: hidden; 
+                        background-color: transparent;"> <!-- This ensures the circle -->
+              <img style="width: 100%;
+                          height: 100%;
+                          border-radius: 50%;
+                          object-fit: cover; /* Ensures the image fits within the circle */
+                          position: relative; 
+                          z-index: 1;" 
+                   loading="lazy" 
+                   src="/assests/Logo-bot-removebg-preview.png" 
+                   alt="AI avatar"
+                   class="object-contain shrink-0">
+              
+              <!-- White background applied to the center only -->
+              <div style="position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          width: 70%; /* Adjust as needed */
+                          height: 70%; /* Adjust as needed */
+                          background-color: white;
+                          border-radius: 50%;
+                          z-index: 0;"></div>
+            </div>
+            
                         <p style="width: 647px;"
                           class="flex flex-col text-left  bg-transparent text-white rounded-2xl "
                         >
@@ -295,13 +339,35 @@
                   
                       <!-- Bot Message (Left Aligned) -->
                       <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
-                        <img style="width: 46px;
-             height: 46px;"
-                          loading="lazy"
-                          src="/assests/chat-bot.png"
-                          alt="AI avatar"
-                          class="object-contain shrink-0 vertical-center"
-                        />
+                        <div style="position: relative; 
+            width: 46px; 
+            height: 46px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+            background-color: transparent;"> <!-- This ensures the circle -->
+  <img style="width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover; /* Ensures the image fits within the circle */
+              position: relative; 
+              z-index: 1;" 
+       loading="lazy" 
+       src="/assests/Logo-bot-removebg-preview.png" 
+       alt="AI avatar"
+       class="object-contain shrink-0">
+  
+  <!-- White background applied to the center only -->
+  <div style="position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 70%; /* Adjust as needed */
+              height: 70%; /* Adjust as needed */
+              background-color: white;
+              border-radius: 50%;
+              z-index: 0;"></div>
+</div>
+
                         <p style="width: 647px;"
                         class="flex flex-col text-left  bg-transparent text-white rounded-2xl "
                       >
