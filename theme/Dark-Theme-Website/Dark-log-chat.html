@@ -23,7 +23,7 @@
             <div class="flex relative flex-col pb-5 w-full min-h-[1024px] max-md:max-w-full ">
               <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
                 <div class="flex py-5 px-5 flex-wrap gap-10 justify-between items-center  max-md:max-w-full">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[129px]" />
+                  <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[229px]" />
                   <nav class="flex me-5  gap-2.5 items-center self-stretch my-auto min-w-[240px]">
                     <img loading="lazy" src="/assests/chat-user.png" alt="Navigation Icon" class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]" />
                     <button class="overflow-hidden  gap-2 self-stretch px-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid p-5">
@@ -172,13 +172,36 @@
                     
                         <!-- Bot Message (Left Aligned) -->
                         <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
-                          <img style="width: 46px;
-                          height: 46px;"
-                            loading="lazy"
-                            src="/assests/chat-bot.png"
-                            alt="AI avatar"
-                            class="object-contain shrink-0 "
-                          />
+                          <div style="position: relative; 
+                          width: 46px; 
+                          height: 46px; 
+                          border-radius: 50%; 
+                          overflow: hidden; 
+                          background-color: transparent;"> <!-- This ensures the circle -->
+                <img style="width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: cover; /* Ensures the image fits within the circle */
+                            position: relative; 
+                            z-index: 1;" 
+                     loading="lazy" 
+                     src="/assests/Logo-bot-removebg-preview.png" 
+                     alt="AI avatar"
+                     class="object-contain shrink-0">
+                
+                <!-- White background applied to the center only -->
+                <div style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%; /* Adjust as needed */
+                            height: 70%; /* Adjust as needed */
+                            background-color: white;
+                            border-radius: 50%;
+                            z-index: 0;"></div>
+              </div>
+              
+              
                           <p style="width: 647px;"
                             class="flex flex-col text-left  bg-transparent text-white rounded-2xl "
                           >
@@ -204,13 +227,35 @@
                     
                         <!-- Bot Message (Left Aligned) -->
                         <div class="flex gap-5 items-left self-left mt-8 w-full max-md:max-w-full">
-                          <img style="width: 46px;
-               height: 46px;"
-                            loading="lazy"
-                            src="/assests/chat-bot.png"
-                            alt="AI avatar"
-                            class="object-contain shrink-0 vertical-center"
-                          />
+                          <div style="position: relative; 
+                          width: 46px; 
+                          height: 46px; 
+                          border-radius: 50%; 
+                          overflow: hidden; 
+                          background-color: transparent;"> <!-- This ensures the circle -->
+                <img style="width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: cover; /* Ensures the image fits within the circle */
+                            position: relative; 
+                            z-index: 1;" 
+                     loading="lazy" 
+                     src="/assests/Logo-bot-removebg-preview.png" 
+                     alt="AI avatar"
+                     class="object-contain shrink-0">
+                
+                <!-- White background applied to the center only -->
+                <div style="position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 70%; /* Adjust as needed */
+                            height: 70%; /* Adjust as needed */
+                            background-color: white;
+                            border-radius: 50%;
+                            z-index: 0;"></div>
+              </div>
+              
                           <p style="width: 647px;"
                           class="flex flex-col text-left  bg-transparent text-white rounded-2xl "
                         >
