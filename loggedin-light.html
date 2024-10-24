@@ -526,12 +526,16 @@
         <div class="flex py-5 flex-wrap gap-10 justify-between items-center max-md:max-w-full">
             <!-- Wrap the buttons and logo in a parent div with flexbox -->
             <div class="flex  items-center justify-between max-md:flex-row max-md:justify-center">
-                <!-- Image Button (Visible on md and below) -->
-                <button class="block md:hidden order-1 me-5 pe-5">
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
-                </button>
 
-                <!-- Logo (centered between buttons) -->
+             <!-- Image Button (Visible on md and below) -->
+<button id="menuButton"  class="block md:hidden order-1 me-5 pe-5" aria-label="Toggle Menu">
+  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
+</button>
+
+
+
+
+<!-- Logo (centered between buttons) -->
                 <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain  ps-5  my-auto w-[179px] max-md:order-2 max-md:mx-auto" />
 
              
