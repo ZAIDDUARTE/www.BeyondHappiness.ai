@@ -521,22 +521,25 @@
     <section class="flex  overflow-hidden flex-col">
       <div class="flex relative flex-col pb-5 w-full  max-md:max-w-full">
         <!-- Background Image -->
-        <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
+        <img style="opacity: 0.1; z-index: -1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
         
         <div class="flex py-5 flex-wrap gap-10 justify-between items-center max-md:max-w-full">
             <!-- Wrap the buttons and logo in a parent div with flexbox -->
             <div class="flex  items-center justify-between max-md:flex-row max-md:justify-center">
 
              <!-- Image Button (Visible on md and below) -->
-<button id="menuButton"  class="block md:hidden order-1 me-5 pe-5" aria-label="Toggle Menu">
+<button id="menuButton"  class="block md:hidden order-1 " aria-label="Toggle Menu">
   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
 </button>
 
 
 
 
+
+
 <!-- Logo (centered between buttons) -->
-                <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain  ps-5  my-auto w-[179px] max-md:order-2 max-md:mx-auto" />
+                <a href="/index.html" style="cursor: pointer
+                ;"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain  ps-5  my-auto w-[179px] max-md:order-2 max-md:mx-auto" /></a>
 
              
 
@@ -553,45 +556,86 @@
 
             <nav class="flex items-center self-stretch my-auto flex-grow justify-end me-5">
                 <!-- User Menu Button -->
+
+
+                
                  
                 <div  onclick="toggleModal(true)" class="relative">
+
+
+                  
                     <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[36px]" aria-label="User Menu">
                         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="User Icon" class="object-contain self-stretch my-auto w-5 aspect-square" />
                     </button>
+                    
 
                     
 
                     <!-- Dropdown Menu -->
                     <div style="z-index: 1;" id="userDropdown" class="hidden absolute right-0 mt-5 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <nav class="flex flex-col p-2 bg-white rounded-lg shadow-lg max-w-[240px]">
+
+
+
+                          
                             <button id="settingsBtn" class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
                                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4336a7f3bbe0a9b419bf3651a67458a3c65af3432e98a7c6fded1d0aadc8a931?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
                                 <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Settings</span>
                             </button>
+
+
+                            
                             <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
                             <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
                                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe05ebcc47725b314cc87cd0601a76f25ddc081b1ec2384af7966c3841d029e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
                                 <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Help & Support</span>
                             </button>
+
+                            
                             <button class="flex gap-2 items-center p-2 mt-1 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
                                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2b7e60d17d50e34fc087ab60f74002863fc61ac11389e287b342df36e1d0a52?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
                                 <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Feedback</span>
                             </button>
                             <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
                         </nav>
+
+                        
                     </div>
                 </div>
             </nav>
 
+        
+
                <!-- Upgrade Button (Visible on large screens only) -->
-    <button class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto ">
-        Upgrade
-    </button>
+               <img  class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]"
+               src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" 
+               alt="Upgrade" 
+               class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto" 
+           />
+
+      
+          
+           
+
+           <button id="upgradeButton" class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto" style="cursor: pointer;">
+           <a href="/Main-Pages/Upgrade-tier's-page.html">Upgrade</a> 
+        </button>
+        
+
+        
+        
+
+        
+          
+           
+
         </div>
 
 
 
           </header>
+
+          
           <main class="flex border border-solid rounded-xl  relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full">
             <aside id="mobile-sidebar" class="fixed inset-y-0 left-0 z-40 bg-gray-100 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:relative  border-solid  rounded-l-xl">
               <!-- Sidebar container with scroll functionality for all screen sizes -->
@@ -636,106 +680,123 @@
               </div>
             </aside>
             
-           <section class="flex  flex-col grow shrink-0 items-center px-20 bg-gray-50 border border-solid rounded-r-xl basis-0 w-fit max-md:px-5 max-md:max-w-full">
-              <div class="flex flex-col w-full max-w-[1338px] max-md:max-w-full">
-                <div class="flex flex-col justify-center  w-full min-h-[814px] max-md:max-w-full">
-                  <div class="flex flex-col w-full max-md:max-w-full">
-                    <header class="flex flex-col items-center w-full text-center text-gray-900 max-md:max-w-full">
-                      <h1 class="text-5xl pt-20 font-medium tracking-tighter  leading-10 max-md:max-w-full hidden md:block">
-                        Master Your Emotional Well-Being with Next-Gen AI
-                    </h1>
+      
+            
+              <section class="flex border rounded-r-xl  flex-col grow shrink-0 items-center px-20 bg-gray-50  basis-0 w-fit max-md:px-5 max-md:max-w-full">
+                <div class="flex flex-col  max-w-[1338px] max-md:max-w-full">
+                  <div class="flex flex-col justify-center  w-full min-h-[814px] max-md:max-w-full">
+                    <div class="flex flex-col  max-md:max-w-full">
+                      <header class="flex flex-col items-center w-full text-center text-gray-900 max-md:max-w-full">
+                        <h1 style="font-size: 40px; font-weight: 500;" class="text-5xl pt-20  tracking-tighter  leading-10 max-md:max-w-full hidden md:block">
+                          Master Your Emotional Well-Being with Next-Gen AI
+                      </h1>
+                      
+                      <h1 style="font-weight: 500; font-size: 36px;" class="text-3xl tracking-tighter pt-5 leading-10 max-md:max-w-full md:hidden">
+                          Master Your Emotional <br> Well-Being with <br> Next-Gen AI
+                      </h1>
+                      
+                      
+                       
+                        <p class="mt-5 text-base max-md:max-w-full">Your Personalized Emotional and Personal Growth Companion</p>
+                      </header>
+                      <div class="flex flex-col mt-8 w-full max-md:max-w-full">
+                        <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
+                          <section class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
+  
+                            <article class="flex flex-col w-full p-5">
+                        
+                                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/658ece32d9807ab10eac18dde7c06c11149fffbe788d6b85910f2e1312bfbe80?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Personalized Support Icon" class="object-contain w-8 aspect-square" />
+                        
+                                <h2 class="mt-3 text-lg font-semibold tracking-tight leading-7 text-gray-50">
+                        
+                                    Personalized, Adaptive Emotional Support
+                        
+                                </h2>
+                        
+                                <p class="mt-3 text-base leading-6 text-indigo-200 hidden md:block">
+                        
+                                    Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
+                        
+                                </p>
+                        
+                            </article>
+                        
+                        </section>
+                        
                     
-                    <h1 style="font-weight: 600;" class="text-3xl tracking-tighter pt-5 leading-10 max-md:max-w-full md:hidden">
-                        Master Your Emotional <br> Well-Being with <br> Next-Gen AI
-                    </h1>
                     
+                            <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
+                                <div class="flex flex-col my-3 w-full h-full">
+                                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                                    <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                                        Proactive, Predictive Emotional Guidance
+                                    </h2>
+                                    <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                                        Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
+                                    </p>
+                                </div>
+                            </article>
                     
-                     
-                      <p class="mt-5 text-base max-md:max-w-full">Your Personalized Emotional and Personal Growth Companion</p>
-                    </header>
-                    <div class="flex flex-col mt-8 w-full max-md:max-w-full">
-    <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
-        <article class="flex flex-col flex-1 shrink justify-center p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5">
-            <div class="flex flex-col w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c14428a764c6a052b8ca6afa883990e8eff674be1491ebebe878b6a77b2713b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain w-8 aspect-square mt-5 ms-5" />
-                <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                    Personalized, Adaptive Emotional Support
-                </h2>
-                <p class="mt-3 mb-5 mx-4 text-base leading-6 text-indigo-200 hidden md:block">
-                    Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
-                </p>
-            </div>
-        </article>
-
-        <article class="flex flex-col flex-1 shrink justify-center p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5">
-            <div class="flex flex-col my-3 w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
-                <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                    Proactive, Predictive Emotional Guidance
-                </h2>
-                <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
-                    Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
-                </p>
-            </div>
-        </article>
-
-        <article class="flex flex-col flex-1 shrink justify-center p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid basis-0 min-w-[240px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)] max-md:px-5">
-            <div class="flex flex-col w-full">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain mt-5 ms-5 w-8 aspect-square" />
-                <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                    Intellectual, Personal, and Creative Exploration
-                </h2>
-                <p class="mt-3 mx-4 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
-                    Foster personal growth, professional development, and cognitive enhancement while inspiring fun, intellectual discovery, creativity, and exploration of curiosities.
-                </p>
-            </div>
-        </article>
-    </div>
-</div>
-<div class="hidden md:block flex flex-col mt-8 w-full font-medium max-md:max-w-full">
-  <h3 class="flex-1 shrink w-full text-lg tracking-tight leading-loose text-gray-400 max-md:max-w-full">
-      Start by asking...
-  </h3>
-  <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
-      <div class="flex flex-wrap gap-4 justify-center w-full max-md:max-w-full">
-          <button class="flex flex-col flex-1 shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]">
-              <span class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
-          </button>
-          <button class="flex flex-col flex-1 shrink justify-center text-start p-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]">
-              <span class="w-full">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
-          </button>
-          <button class="flex flex-col flex-1 shrink justify-center text-start pb-5 px-5 bg-gray-100 rounded-2xl basis-0 min-w-[240px]">
-              <span class="w-full">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
-          </button>
-      </div>
-  </div>
-  <center><button class="overflow-hidden gap-1.5 self-center px-3 py-2 mt-6 text-xs leading-none text-center text-black bg-transparent rounded-lg border border border-1 ">
-      Explore More
-  </button></center>
-</div>
-
-                <div class="flex gap-3 justify-center self-center py-3 w-full">
-                  <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
-                    <form class="flex flex-wrap mt-10 gap-3 w-full min-h-[60px] max-md:max-w-full  md:mb-0">
-                      <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
-                      <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
-                      <button type="submit" class="gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
-                        Send
-                      </button>
-                     
-                    </form>
-                    <p class="self-center  mt-5 text-xs leading-snug text-center  max-md:max-w-full">
-                      Our Al offers guidance but is not a substitute for professional therapy or medical advice.
-                      <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </main>
+                            <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
+                                <div class="flex flex-col w-full h-full">
+                                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain mt-5 ms-5 w-8 aspect-square" />
+                                    <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                                        Intellectual, Personal, and Creative Exploration
+                                    </h2>
+                                    <p class="mt-3 mx-4 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                                        Foster personal growth, professional development, and cognitive enhancement while inspiring fun, intellectual discovery, creativity, and exploration of curiosities.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+  <div class="hidden md:block flex flex-col mt-8 w-full font-medium max-md:max-w-full">
+    <h3 class="flex-1 shrink w-full text-lg tracking-tight leading-loose text-gray-400 max-md:max-w-full">
+        Start by asking...
+    </h3>
+    <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
+        <div class="flex flex-wrap gap-4 justify-start w-full max-md:max-w-full">
+           <button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+      <span class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
+  </button>
+  <button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+      <span class="w-full">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
+  </button>
+  <button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+      <span class="w-full">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
+  </button>
+  
         </div>
-      </section>
+    </div>
+    <center><button class="overflow-hidden gap-1.5 self-center px-3 py-2 mt-6 text-xs leading-none text-center text-black bg-transparent rounded-lg border border border-1 ">
+        Explore More
+    </button></center>
+  </div>
 
+  <div class="flex gap-3 justify-center self-start py-3 w-full">
+    <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
+      <form class="flex flex-wrap mt-10 gap-3 w-full min-h-[60px] max-md:max-w-full  md:mb-0">
+        <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
+        <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
+        <button type="submit" class="gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+          Send
+        </button>
+       
+      </form>
+      <p style="font-size: 10px;" class="self-center  mt-5  leading-snug text-center  max-md:max-w-full">
+        Our Al offers guidance but is not a substitute for professional therapy or medical advice.
+        <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+</div>
+</section>
+  
+  
 
 
 
