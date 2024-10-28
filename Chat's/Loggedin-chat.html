@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" >
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    <style>
+<body >
+<style>
+   
         body {
            background-image: url(/assests/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
            background-size: cover;
            background-position: center;
+
+        
         }
       </style>
-    
       <section class="flex  overflow-hidden flex-col">
         <div class="flex relative flex-col pb-5 w-full  max-md:max-w-full">
           <!-- Background Image -->
@@ -102,12 +105,12 @@
   
           
   
-                 <!-- Upgrade Button (Visible on large screens only) -->
-                 <img  class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]"
-                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" 
-                 alt="Upgrade" 
-                 class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto" 
-             />
+               <!-- Upgrade Button (Visible on large screens only) -->
+               <img  class="hidden md:block object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]"
+               src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" 
+               alt="Upgrade" 
+             
+           />
   
              <a href="/Main-Pages/Upgrade-tier's-page.html" class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto">
       
@@ -126,147 +129,57 @@
             </header>
 
 
-          <main class="flex relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full">
 
 
 
-<!-- Sidebar (acts as an overlay on mobile) -->
+
+
+
+
+          <main class="flex bg-white  relative flex-wrap self-center w-full max-w-[1400px] max-md:max-w-full  border-solid  rounded-xl">
+
 <aside id="mobile-sidebar" class="fixed inset-y-0 left-0 z-40 bg-gray-100 transform -translate-x-full transition-transform duration-300 ease-in-out md:translate-x-0 md:relative border-r border-solid  rounded-l-xl">
   <!-- Sidebar container with scroll functionality for all screen sizes -->
   <div class="flex flex-col w-[100%] ml-0 h-full ">
     <div class="flex relative max-md:mt-7">
-      <nav class="flex mx-3 flex-col justify-between w-[46px]">
-        <div class="flex flex-col justify-center w-full">
-          <div class="flex flex-col justify-center mt-2.5 w-full"></div>
-           
-          <div class="flex flex-col justify-center mt-2.5 w-full">
-            <button
-              class="flex overflow-hidden gap-2.5 justify-center items-center px-px min-h-[32px] w-[46px]"
-            >
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5d252cda790f68402ee82585e8d70f6fbea0cee350df90ed9e9c22b8914ce8b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                class="object-contain self-stretch my-auto w-5 aspect-[0.91]"
-                alt="History icon"
-              />
-            </button>
-            <span
-              class="self-start text-xs font-semibold leading-snug text-center text-gray-900"
-              >History</span
-            >
+      <nav class="flex flex-auto gap-1 self-start py-3 pr-4 pl-2 mr-0 bg-gray-100 border-r border-solid min-h-[1024px] rounded-l-xl">
+        <div class="flex flex-col justify-between w-[46px] max-md:hidden">
+          <div class="flex flex-col w-full">
+            <div class="flex flex-col justify-center w-full">
+             
+            
+              </div>
+            <div class="flex flex-col justify-center mt-2.5 w-full">
+              <div class="flex overflow-hidden gap-2.5 justify-center items-center px-px min-h-[32px] w-[46px]">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/42bd720ba50f75d7496a365240cc6dba6168a8d5c6b0c2cead159e578b55551b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="History icon" class="object-contain self-stretch my-auto w-5 aspect-[0.91]" />
+              </div>
+              <h2 class="self-start text-xs font-semibold leading-snug text-center text-gray-900">
+                History
+              </h2>
+            </div>
+            <div class="flex flex-col justify-center mt-2.5 w-full">
+              <div class="flex gap-2.5 justify-center items-center min-h-[32px] w-[46px]">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/387bcf3f5c8409b3d889c832e300707803c42b682871a847eec85d232884b099?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Explore icon" class="object-contain self-stretch my-auto aspect-square w-[22px]" />
+              </div>
+              <h2 class="self-start text-xs font-semibold leading-snug text-center text-gray-900">
+                Explore
+              </h2>
+            </div>
           </div>
-          <div class="flex flex-col justify-center mt-2.5 w-full">
-            <button
-              class="flex gap-2.5 justify-center items-center min-h-[32px] w-[46px]"
-            >
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/8354e36df0309c7d22326b461c70928762aead65f278b1409d5b48e9aa33526a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                class="object-contain self-stretch my-auto aspect-square w-[22px]"
-                alt="Explore icon"
-              />
-            </button>
-            <span
-              class="self-start text-xs font-semibold leading-snug text-center text-gray-900"
-              >Explore</span
-            >
+          <div class="flex flex-col justify-center items-center mt-[668px] w-[46px] max-md:mt-10">
+            <div class="flex flex-col justify-center items-center w-full ">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f17af50e5b09736f32e4c5b2b689eebdfa66b00f8f9495cc982a63d2fa68ed6?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Anonymous mode icon" class="object-contain aspect-[1.22] w-[22px]" />
+            </div>
+            <h2 class="text-xs  font-semibold leading-4 text-center text-gray-900">
+              Privacy Mode
+            </h2>
           </div>
         </div>
-        <div
-          class="flex flex-col justify-center items-center mt-[668px] w-[46px]"
-        >
-          <button
-            class="flex flex-col justify-center items-center w-full min-h-[32px]"
-          >
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e80d3c25fe20fe434157a150fe8e9217cf039fb566dd7be1eaecf7e05803a71?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-              class="object-contain aspect-[1.22] w-[22px]"
-              alt="Anonymous Mode icon"
-            />
-          </button>
-          <span class="text-xs font-semibold mb-3  leading-4 text-center text-gray-900"
-            >Privacy Mode</span
-          >
-        </div>
-      </nav>
-    
       
-        
-      <main class="flex z-10 flex-col self-end mt-0 w-full text-gray-50 mx-5 max-w-[228px]">
-  
-        <header class="flex gap-1 items-center w-full text-lg font-semibold tracking-tight leading-loose text-gray-900 whitespace-nowrap">
-    
-          <div class="flex gap-1 items-center self-stretch my-auto w-[134px]">
-    
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3eb6af7fe28d7aaa03b49a05ab69c66a28665db55ef64b463e9f52e85c3a01fe?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-    
-            <h1 class="self-stretch my-auto">Explore</h1>
-          </div>
-  
-      </header>
-  
-      <section class="flex flex-col mt-2.5 w-full text-white rounded-none">
-  
-        <article class="flex flex-col items-center px-2.5 pt-16 pb-3.5 bg-rose-500 rounded-lg aspect-square">
-  
-          <div class="flex flex-col">
-  
-            <h2 class="text-lg font-bold tracking-tight leading-7">Addiction Recovery Mastery: Break Free and Reclaim Your Life</h2>
-  
-            <p class="mt-1.5 text-xs font-medium leading-4">These prompts offer actionable strategies, emotional support, and expert guidance to help you overcome prevalent addictions and reclaim your well-being.</p>
-  
-          </div>
-  
-        </article>
-  
-      </section>
-  
-      <section class="flex flex-col mt-2.5 w-full text-xs font-semibold leading-loose rounded-lg">
-  
-        <h3 class="p-2.5 bg-rose-700 rounded-lg">Digital and Screen Addiction</h3>
-  
-      </section>
-  
-      <ul class="flex flex-col items-start mt-2.5 w-full text-sm leading-5 text-gray-900">
-  
-        <li class="gap-2.5 self-stretch px-2.5 py-2 w-full bg-rose-100 rounded-lg">Help me recognize digital addiction and its impact on my mental health and relationships.</li>
-  
-        <li class="gap-2.5 px-2.5 py-2 w-full">Guide me in creating a gradual, sustainable digital detox plan.</li>
-  
-        <li class="gap-2.5 px-2.5 py-2 w-full">Show me how to set healthy boundaries with devices and social media.</li>
-  
-        <li class="gap-2.5 px-2.5 py-2 w-full">How can I replace screen time with enriching activities?</li>
-  
-        <li class="gap-2.5 px-2.5 py-2 w-full">Help me manage cravings and FOMO as I reduce screen time.</li>
-  
-      </ul>
-      <section class="flex flex-col mt-2.5 w-full text-xs font-semibold leading-5 rounded-lg">
-  
-          <h3 class="p-2.5 bg-rose-500 rounded-lg">Social Media and Validation Addiction</h3>
-    
-        </section>
-    
-        <section class="flex flex-col mt-2.5 w-full text-xs font-semibold leading-5 rounded-lg">
-    
-          <h3 class="p-2.5 bg-rose-500 rounded-lg">Substance Abuse: Alcohol and Drug Addiction</h3>
-    
-        </section>
-    
-        <section class="flex flex-col mt-2.5 w-full text-xs font-semibold leading-loose rounded-lg">
-    
-          <h3 class="p-2.5 bg-rose-500 rounded-lg">Nicotine and Vaping Addiction</h3>
-    
-        </section>
-    
-        <section class="flex flex-col pb-2 mt-2.5 w-full text-xs font-semibold leading-5 rounded-lg">
-    
-          <h3 class="px-2.5 pt-2.5 pb-0.5 bg-rose-500 rounded-lg">Food Addiction and Emotional Eating</h3>
-    
-        </section>
-    
-      </main>
-    </nav>
+            
+
+
+      </nav>
     </div>
   </div>
 </aside>
@@ -293,34 +206,18 @@
   });
 </script>
 
-<section class="flex  flex-col grow shrink-0 items-center px-20 bg-gray-50 border-r border-solid  rounded-r-xl basis-0 w-fit max-md:px-5 max-md:max-w-full ">
-                    <div  class="flex flex-col w-full max-w-[1244px] max-md:max-w-full mx-auto">
+                  <section class="flex  flex-col grow shrink-0 items-center px-20 bg-gray-50 border-r border-solid  rounded-r-xl basis-0 w-fit max-md:px-5 max-md:max-w-full ">
+                    <div  class="flex flex-col w-full max-w-[904px] max-md:max-w-full mx-auto">
                       <section
                         class="flex flex-col overflow-y-auto  w-full text-base text-gray-900  max-md:pt-24 max-md:max-w-full"
                       >
-
-                       <!-- User Message (Right Aligned) -->
-                       <!-- <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
-                        <p 
-                        class="flex px-5 flex-col text-right  py-4 bg-gray-100 rounded-2xl "
-                      >
-                         Yes, how can I become more self-aware?
-                       </p>
-                       <img style="width: 46px;
-            height: 46px;"
-                         loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c69512c2d05b95b83e8654b178ca2792255f825acf9bc7f474a7cf7dd0c952b7?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                         alt="User avatar"
-                         class="object-contain shrink-0 "
-                       />
-                     </div> -->
-             
+                        
                         <!-- Bot Message (Left Aligned) -->
                         <div class="flex  gap-5 items-start self-start mt-8 w-full max-md:max-w-full">
                           <img style="width: 46px;
                height: 46px;"
                             loading="lazy"
-                            src="/assests/premiuim-icon.png"
+                            src="/assests/Logo-bot.jpg"
                             alt="AI avatar"
                             class="object-contain shrink-0 "
                           />
@@ -352,7 +249,7 @@
                           <img style="width: 46px;
                           height: 46px;"
                             loading="lazy"
-                            src="/assests/premiuim-icon.png"
+                            src="/assests/Logo-bot.jpg"
                             alt="AI avatar"
                             class="object-contain shrink-0 "
                           />
@@ -365,7 +262,7 @@
                     
                         <!-- User Message (Right Aligned) -->
                         <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
-                          <p 
+                           <p 
                            class="flex px-5 flex-col text-right  py-4 bg-gray-100 rounded-2xl "
                          >
                             Sure, I've never meditated before, though. Is it difficult?
@@ -384,7 +281,7 @@
                           <img style="width: 46px;
                height: 46px;"
                             loading="lazy"
-                            src="/assests/premiuim-icon.png"
+                            src="/assests/Logo-bot.jpg"
                             alt="AI avatar"
                             class="object-contain shrink-0 vertical-center"
                           />
@@ -397,7 +294,7 @@
                     
                         <!-- User Message (Right Aligned) -->
                         <div class="flex gap-5 items-right justify-end self-right mt-8 w-full max-md:max-w-full">
-                          <p 
+                           <p 
                            class="flex px-5 flex-col text-right  py-4 bg-gray-100 rounded-2xl "
                          >
                             That sounds good. Let's try it.
@@ -409,17 +306,18 @@
                             alt="User avatar"
                             class="object-contain shrink-0"
                           />
+                         
                         </div>
+                        <img 
+                        loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c5b3088cb0d6be102ae755cef61b02bb6d46d67b61ca2965a576742383b6eb2b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                        alt="Loading Indicator"
+                        class="object-contain mt-8 aspect-square w-[97px]"
+                      />
                       </section>
                     </div>
                           
-                    <img style="width: 86px;
-                    height: 86px;"
-                                 loading="lazy"
-                                 src="/assests/premiuim-icon.png"
-                                 alt="User avatar"
-                                 class="object-contain item-start self-start text-start shrink-0 "
-                               />
+               
                         <!-- Main Section Ends Here -->
                            
                
@@ -427,7 +325,7 @@
                  
                
                          <!-- Here the third Section Starts -->
-                         <div class="flex gap-3 justify-center self-center py-3 w-full mt-20">
+                         <div class="flex gap-3 justify-center self-center py-3 w-9/12 mt-20">
                           <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
                             <form class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full mb-20 md:mb-0">
                               <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
@@ -438,14 +336,11 @@
                              
                             </form>
                             <p style="font-size: 10px;" class="self-center   mt-5  leading-snug text-center  max-md:max-w-full">
-                               Our Al offers guidance but is not a substitute for professional
-                               therapy or medical advice.
-                               <a href="#learn-more" class="text-indigo-500 underline"
-                                 >Learn more about our limitations here.</a
-                               >
-                             </p>
-                           </div>
-                         </div>
+                              Our Al offers guidance but is not a substitute for professional therapy or medical advice.
+                              <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+                            </p>
+                          </div>
+                        </div>
                        </div>
                   </section>
                   </div>
@@ -458,5 +353,3 @@
       </section>
 </body>
 </html>
-
-
