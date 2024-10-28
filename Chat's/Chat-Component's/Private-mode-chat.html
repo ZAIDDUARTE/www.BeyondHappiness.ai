@@ -16,72 +16,115 @@
         }
       </style>
     
-        <section class="flex overflow-hidden flex-col">
-            <div class="flex relative flex-col pb-5 w-full min-h-[1024px] max-md:max-w-full">
-              <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
-                <div class="flex py-5 px-5 flex-wrap gap-10 justify-between items-center  max-md:max-w-full">
-                  <img loading="lazy" src="/assests/Logo.png" alt="Company Logo" class="object-contain shrink-0 self-stretch my-auto aspect-[3.39] w-[229px]" />
-                  <nav class="flex me-5  gap-2.5 items-center self-stretch my-auto min-w-[240px]">
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Navigation Icon" class="object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]" />
-                    <button class="overflow-hidden  gap-2 self-stretch px-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid p-5">
-                      Upgrade
-                    </button>
+      <section class="flex  overflow-hidden flex-col">
+        <div class="flex relative flex-col pb-5 w-full  max-md:max-w-full">
+          <!-- Background Image -->
+          <img style="opacity: 0.1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
+          
+          <div class="flex py-5 flex-wrap gap-10 justify-between items-center max-md:max-w-full">
+              <!-- Wrap the buttons and logo in a parent div with flexbox -->
+              <div class="flex  items-center justify-between max-md:flex-row max-md:justify-center">
+  
+               <!-- Image Button (Visible on md and below) -->
+  <button id="menuButton"  class="block md:hidden order-1 " aria-label="Toggle Menu">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
+  </button>
+  
+  
+  
+  
+  
+  
+  <!-- Logo (centered between buttons) -->
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain  ps-5  my-auto w-[179px] max-md:order-2 max-md:mx-auto" />
+  
+               
+  
+   
+  
+  
+                  <!-- Placeholder for spacing on the right side for md or below -->
+                  <div class="hidden md:block order-3"></div>
+              </div>
+  
+              
+   
+    
+  
+              <nav class="flex items-center self-stretch my-auto flex-grow justify-end me-5">
+                  <!-- User Menu Button -->
+  
+  
+                  
+                   
+                  <div  onclick="toggleModal(true)" class="relative">
+  
+  
                     
-                    
-                       <!-- User Menu Button -->
-      <div class="relative">
-        <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[46px]" aria-label="User Menu">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-5 aspect-square" />
-        </button>
-    
-        <!-- Dropdown Menu -->
-        <div style="z-index: 1;" id="userDropdown" class="hidden absolute right-0 mt-5 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-          <nav class="flex flex-col p-2 bg-white rounded-lg shadow-lg max-w-[240px]">
-            <button id="settingsBtn" class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4336a7f3bbe0a9b419bf3651a67458a3c65af3432e98a7c6fded1d0aadc8a931?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
-              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Settings</span>
-            </button>
-            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
-            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe05ebcc47725b314cc87cd0601a76f25ddc081b1ec2384af7966c3841d029e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
-              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Help & Support</span>
-            </button>
-            <button class="flex gap-2 items-center p-2 mt-1 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2b7e60d17d50e34fc087ab60f74002863fc61ac11389e287b342df36e1d0a52?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
-              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Feedback</span>
-            </button>
-            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
-            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b9474ffe132ce66aabb558807168c3c0273b8314750849210b4af8e0f1f89ad?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
-              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Log Out</span>
-            </button>
-          </nav>
-        </div>
-      </div>
-    
-      <!-- JavaScript to toggle dropdown -->
-      <script>
-        const userMenuButton = document.getElementById('userMenuButton');
-        const userDropdown = document.getElementById('userDropdown');
-    
-        // Toggle dropdown visibility
-        userMenuButton.addEventListener('click', (event) => {
-          event.stopPropagation(); // Prevents the event from bubbling up
-          userDropdown.classList.toggle('hidden');
-        });
-    
-        // Close dropdown if clicked outside
-        document.addEventListener('click', function (event) {
-          if (!userMenuButton.contains(event.target) && !userDropdown.contains(event.target)) {
-            userDropdown.classList.add('hidden');
-          }
-        });
-      </script>
-                    
+                      <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[36px]" aria-label="User Menu">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="User Icon" class="object-contain self-stretch my-auto w-5 aspect-square" />
+                      </button>
+                      
+  
+                      
+  
+                      <!-- Dropdown Menu -->
+                      <div style="z-index: 1;" id="userDropdown" class="hidden absolute right-0 mt-5 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                          <nav class="flex flex-col p-2 bg-white rounded-lg shadow-lg max-w-[240px]">
+  
+  
+  
+                            
+                              <button id="settingsBtn" class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4336a7f3bbe0a9b419bf3651a67458a3c65af3432e98a7c6fded1d0aadc8a931?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+                                  <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Settings</span>
+                              </button>
+  
+  
+                              
+                              <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+                              <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe05ebcc47725b314cc87cd0601a76f25ddc081b1ec2384af7966c3841d029e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+                                  <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Help & Support</span>
+                              </button>
+  
+                              
+                              <button class="flex gap-2 items-center p-2 mt-1 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2b7e60d17d50e34fc087ab60f74002863fc61ac11389e287b342df36e1d0a52?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
+                                  <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Feedback</span>
+                              </button>
+                              <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+                          </nav>
+  
+                          
+                      </div>
+                  </div>
+              </nav>
+  
+          
+  
+              <!-- Upgrade Button (Visible on large screens only) -->
+              <img  class="hidden md:block object-contain shrink-0 gap-0 self-stretch my-auto aspect-[2.11] w-[97px]"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff38862dba12d26c8aa0eb3f359a5a53eabc0f0e62c9f46cfab0cebe938c2de?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" 
+              alt="Upgrade" 
+            
+          />
+  
+             <a href="/Main-Pages/Upgrade-tier's-page.html" class="hidden md:block overflow-hidden gap-2 self-stretch px-5 me-5 py-3.5 my-auto text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid order-3 ml-auto">
       
-                  </nav>
-                </div>
-              </header>
+                Upgrade
+        
+            </a>
+        
+            
+            
+             
+  
+          </div>
+  
+  
+  
+            </header>
 
 
 
@@ -303,13 +346,13 @@ background: var(--Primary-900, #312E81);"
                           <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
                             <form class="flex flex-wrap gap-3 w-full min-h-[60px] max-md:max-w-full mb-20 md:mb-0">
                               <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
-                              <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
+                              <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-dark bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
                               <button type="submit" class="gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
                                 Send
                               </button>
                              
                             </form>
-                            <p class="self-center mt-20 md:mt-5 pt-20 md:pt-0 mt-5 text-xs leading-snug text-center text-black max-md:max-w-full">
+                            <p style="font-size: 10px;" class="self-center   mt-5  leading-snug text-center  max-md:max-w-full">
                               Our Al offers guidance but is not a substitute for professional therapy or medical advice.
                               <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
                             </p>
