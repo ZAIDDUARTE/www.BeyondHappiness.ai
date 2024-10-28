@@ -505,144 +505,42 @@
     }
   </style>
 
-
   <section class="flex overflow-hidden flex-col">
-    <div class="flex relative flex-col pb-5 w-full  max-md:max-w-full">
-        <!-- Background Image -->
-        <img style="opacity: 0.1; z-index: -1;" loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-cover absolute inset-0 size-full" />
-        
-        <div class="flex py-5 flex-wrap gap-10 justify-between items-center max-md:max-w-full">
-            <!-- Wrap the buttons and logo in a parent div with flexbox -->
-            <div class="flex  items-center justify-between max-md:flex-row max-md:justify-center">
-                <!-- Image Button (Visible on md and below) -->
-                <!-- <button class="block md:hidden order-1 me-5 pe-5">
-                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
-                </button> -->
-
-                <!-- Logo (centered between buttons) -->
-                <a href="/index.html" style="cursor: pointer;"><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Company Logo" class="object-contain  ps-5  my-auto w-[179px] max-md:order-2 max-md:mx-auto" /></a>
-
-             
-
- 
-
-
-                <!-- Placeholder for spacing on the right side for md or below -->
-                <div class="hidden md:block order-3"></div>
-            </div>
-
-            
- 
+    <div class="flex relative flex-col pb-5 w-full max-md:max-w-full">
+      <!-- Background Image -->
+      <img style="opacity: 0.1; z-index: -1;" loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/dcf86fc40db3e20e008156f5154c32a02d708dc22baec82415326dce49cca218?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+        alt="" class="object-cover absolute inset-0 size-full" />
   
-
-            <nav class="flex items-center self-stretch my-auto flex-grow justify-end me-5">
-                <!-- User Menu Button -->
-                 
-                 <!-- Navigation with "Login" and "Create a Account" Buttons -->
-                 <div class="flex gap-2.5 items-center self-stretch my-auto min-w-[240px]">
-                  <button class="gap-2 self-stretch px-5 py-3.5 my-auto text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
-                      Login
-                  </button>
-                  <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid">
-                      Create a Account
-                  </button>
-
-
-
-
-                      <!-- Dropdown -->
-  <div style="z-index: 1;" class="relative inline-block text-left">
-    <div>
-      <button type="button" id="dropdownButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Menu
-        <svg class="w-2.5 h-2.5 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Dropdown content -->
-    <div id="dropdownMenu" class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-      <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
-        <a href="/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Light-welcome</a>
-        <a href="Dark-mode.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-welcome</a>
-        <a href="/loggedin-light.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Light-logged-welcome</a>
-        <a href="/theme/loggedin-Dark-Mode.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-logged-welcome</a>
-        <a href="/Chat's/Welcome-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-without login</a>
-        <a href="/Chat's/Loggedin-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-with login</a>
-        <a href="/Chat's/Premium-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-premium</a>
-        <a href="/Main-Pages/Upgrade-tier's-page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Upgrade page</a>
-       
-        <a href="/Chat's/Chat-Component's/Private-mode-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Private mode</a>
-        <a href="/Chat's/Chat-Component's/Explore-sub-category.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Explore subcategory</a>
-        <a href="/Chat's/Chat-Component's/Login-chat-history.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat with history</a>
-        <a href="/Chat's/Chat-Component's/Logined-chat-reactions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login-chat-reaction</a>
-
-        <!-- Dark-Pages -->
-        <a href="/theme/Dark-Theme-Website/Dark-log-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-log-chat</a>
-        <a href="/theme/Dark-Theme-Website/Dark-prem-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-pro-chat</a>
-        <a href="/theme/Dark-Theme-Website/Dark-private.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-private</a>
-        <a href="/theme/Dark-Theme-Website/Dark-Upgrade.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-upgrade</a>
-        <a href="/theme/Dark-Theme-Website/Dark-wel-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-wel-chat</a>
-
-        <!-- Settings-sections -->
-        <a href="/Settings-Pages/Account-Settings.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Acc settings</a>
-        <a href="/Settings-Pages/Help-support.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help and support</a>
-        <a href="/Settings-Pages/Privacy-Data.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 3</a>
-        <a href="/Settings-Pages/Subscription.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 4</a>
-        <a href="/Settings-Pages/Theme.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 5</a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Dropdown functionality
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    dropdownButton.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
-        
-              </div>
-
-  <script>
-    // Dropdown functionality
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    dropdownButton.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
- 
+      <div class="flex py-5 items-center justify-between w-full max-md:max-w-full">
+        <!-- Logo (centered between buttons) -->
+        <a class="ms-2" href="/index.html" style="cursor: pointer;">
+          <img loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+            alt="Company Logo" class="object-contain w-[179px]" />
+        </a>
+  
+        <!-- Navigation with "Login" and "Create an Account" Buttons -->
+        <div class="flex ms-5 gap-2.5 items-center">
+          <button
+            class="px-2 py-3.5 text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid md:px-3 md:py-2">
+            Login
+          </button>
+          <button
+            class="px-2 me-2 py-3.5 text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid whitespace-nowrap md:px-3 md:py-2">
+            Create an Account
+          </button>
         </div>
-
-       
-      
-                 
- 
+      </div>
 
 
+  
 
 
           <!-- MAIN SECTION START'S HERE -->
           <main class="flex border border-solid rounded-xl  relative flex-wrap self-center  max-w-[1400px] max-md:max-w-full  bg-gray-50">
             
-            <section class="flex border border-solid rounded-xl  flex-col grow shrink-0 items-center px-20 bg-gray-50  basis-0 w-fit max-md:px-5 max-md:max-w-full">
+            <section class="flex  flex-col grow shrink-0 items-center px-20 bg-gray-50  border border-solid rounded-xl basis-0 w-fit max-md:px-5 max-md:max-w-full">
               <div class="flex flex-col w-full max-w-[1338px] max-md:max-w-full">
                 <div class="flex flex-col justify-center  w-full min-h-[814px] max-md:max-w-full">
                   <div class="flex flex-col w-full max-md:max-w-full">
@@ -661,43 +559,51 @@
                     </header>
                     <div class="flex flex-col mt-8 w-full max-md:max-w-full">
                       <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
-                        <section class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
 
-                          <article class="flex flex-col w-full p-5">
+                      <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[367px] custom-width-md" 
+                      style="padding-bottom: var(--sds-size-space-600); padding-left: var(--sds-size-space-600); padding-right: var(--sds-size-space-600); padding-top: var(--sds-size-space-600);">
+               <div class="flex flex-col my-3 w-full h-full py-5">
+                 <img loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/658ece32d9807ab10eac18dde7c06c11149fffbe788d6b85910f2e1312bfbe80?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                      alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                 <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                  Personalized, Adaptive Emotional Support
+                 </h2>
+                 <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                  Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
                       
-                              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/658ece32d9807ab10eac18dde7c06c11149fffbe788d6b85910f2e1312bfbe80?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Personalized Support Icon" class="object-contain w-8 aspect-square" />
-                      
-                              <h2 class="mt-3 text-lg font-semibold tracking-tight leading-7 text-gray-50">
-                      
-                                  Personalized, Adaptive Emotional Support
-                      
-                              </h2>
-                      
-                              <p class="mt-3 text-base leading-6 text-indigo-200 hidden md:block">
-                      
-                                  Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
-                      
-                              </p>
-                      
-                          </article>
-                      
-                      </section>
+                 </p>
+               </div>
+             </article>
                       
                   
                   
-                          <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
-                              <div class="flex flex-col my-3 w-full h-full">
-                                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
-                                  <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                                      Proactive, Predictive Emotional Guidance
-                                  </h2>
-                                  <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
-                                      Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
-                                  </p>
-                              </div>
-                          </article>
-                  
-                          <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
+                      <style>
+                        /* Custom inline styling for full width on medium screens and below */
+                        @media (max-width: 768px) {
+                          .custom-width-md {
+                            width: 100%;
+                          }
+                        }
+                      </style>
+                      
+                      <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[367px] custom-width-md" 
+                               style="padding-bottom: var(--sds-size-space-600); padding-left: var(--sds-size-space-600); padding-right: var(--sds-size-space-600); padding-top: var(--sds-size-space-600);">
+                        <div class="flex flex-col my-3 w-full h-full py-5">
+                          <img loading="lazy"
+                               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
+                               alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                          <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                            Proactive, Predictive Emotional Guidance
+                          </h2>
+                          <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                            Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
+                          </p>
+                        </div>
+                      </article>
+                      
+                      <article class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid max-w-[367px] custom-width-md" 
+                      style="padding-bottom: var(--sds-size-space-600); padding-left: var(--sds-size-space-600); padding-right: var(--sds-size-space-600); padding-top: var(--sds-size-space-600);">
                               <div class="flex flex-col w-full h-full">
                                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain mt-5 ms-5 w-8 aspect-square" />
                                   <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
@@ -717,13 +623,13 @@
   </h3>
   <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
       <div class="flex flex-wrap gap-4 justify-start w-full max-md:max-w-full">
-         <button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+         <button style="width: 367px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
     <span class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
 </button>
-<button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+<button style="width: 367px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
     <span class="w-full font-weight: 400;">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
 </button>
-<button style="width: 337.7px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
+<button style="width: 367px; font-weight: 400;" class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl max-w-[400px] ">
     <span class="w-full">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
 </button>
 
