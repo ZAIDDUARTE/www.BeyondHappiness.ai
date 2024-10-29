@@ -26,11 +26,12 @@
       <ul>
         <li>
           <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
+            class="flex gap-2.5 items-center px-4 py-2.5 w-full text-lg  tracking-tight leading-loose text-justify  rounded min-h-[48px]" 
             onclick="showTab('tab1')" 
             id="tab1Button"
           >
-          Account Subscription
+          <img loading="lazy" src="/assests/user-pen 1.png" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" />
+          <span>Account Settings</span>
           </button>
         </li>
         <li>
@@ -39,34 +40,46 @@
             onclick="showTab('tab2')" 
             id="tab2Button"
           >
-          Help & Support
-          </button>
+          <span class="flex gap-2.5 items-center self-stretch my-auto">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/161dc6b9ea6e8e1af1b730e29656c7a6a2a1bf919045b890351bfec8b6bac5ad?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-500" />
+            <span class="self-stretch my-auto text-lg font-medium tracking-tight leading-loose text-justify text-gray-500">Subscription</span>
+          </span>
         </li>
         <li>
           <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
+            class="flex gap-2.5 items-center px-4 py-2.5 mt-1 w-full text-lg font-medium tracking-tight leading-loose text-justify text-gray-500 rounded min-h-[48px]" 
             onclick="showTab('tab3')" 
             id="tab3Button"
           >
-          History
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5b6469a3488f52cb3313658abc04a464554c8adc8af4ca53157149bc05c3a59?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" />
+          <span>Privacy and Data</span>
           </button>
         </li>
         <li>
           <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
+            class="flex gap-2.5 items-center px-4 py-2.5 mt-1 w-full text-lg font-medium tracking-tight leading-loose text-justify text-gray-500 rounded min-h-[48px]" 
             onclick="showTab('tab4')" 
             id="tab4Button"
           >
-          Account Subscription
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/08636a36a0776bb7ca09ff1e41c4cb0bab8ddbe667d67974a3428be1ffc7c593?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" />
+          <span>Help & Support</span>
           </button>
         </li>
         <li>
           <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
+            class="flex gap-2.5 items-center py-2.5 pl-4 mt-1 w-full text-lg font-medium tracking-tight leading-loose text-justify text-gray-500 whitespace-nowrap rounded min-h-[48px]" 
             onclick="showTab('tab5')" 
             id="tab5Button"
           >
-            Appearance
+     
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/07e2e973ae9ef0f0490c9dffbfa80d618d24e84a943bb3fdcc900a6d133b6c16?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" />
+            <span>Theme</span>
+       
+          </button>
+        </li>
+        <li>
+          <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 mt-5 w-full text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg border border-indigo-500 border-solid">
+            Logout
           </button>
         </li>
         
@@ -81,20 +94,80 @@
                         <div class="flex flex-col flex-1 shrink justify-center basis-0 min-w-[240px] max-md:max-w-full">
                             <!-- Account Settings -->
                             <section id="account-settings" class="content-section flex flex-col w-full min-h-[256px] max-md:max-w-full">
-                                <header class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
-                                    <h2 class="flex gap-2 items-center self-stretch my-auto">
-                                        <span class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]">
-                                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/70170161443942cdc1701dc85e1e41322f3b48946efd315aca86f35a8c6f640b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900" />
-                                        </span>
-                                        <span class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900">Account Subscription</span>
+                              <main class="flex flex-col flex-1 shrink justify-center basis-0 min-w-[240px] max-md:max-w-full">
+                                <section class="flex flex-col w-full h-[229px] max-md:max-w-full">
+                                  <header class="flex gap-10 justify-between items-center py-1.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                    <h2 class="flex gap-2 items-center self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900 w-[221px]">
+                                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3320eb917301fc55188877183aed51279d9d5a9092e72bd4408ca931a0cafb50?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto w-3.5 aspect-square" />
+                                      <span>Personal Information</span>
                                     </h2>
-                                </header>
-                                <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
-                                    <p class="self-stretch my-auto text-justify text-gray-900">Free Plan</p>
-                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50">
-                                        <button class="gap-2 self-stretch px-5 py-3.5 my-auto bg-indigo-500 rounded-lg border border-indigo-500 border-solid">Upgrade to Premium</button>
+                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium text-center text-indigo-500 whitespace-nowrap">
+                                      <span class="self-stretch px-3.5 my-auto text-lg tracking-tight leading-loose bg-indigo-50 border-2 border-gray-50 border-solid h-[46px] rounded-[400px] w-[46px]">
+                                        SF
+                                      </span>
+                                      <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto text-base leading-none bg-white rounded-lg border border-indigo-500 border-solid">
+                                        Upload
+                                      </button>
                                     </div>
+                                  </header>
+                                  <div class="flex gap-10 justify-between items-center py-2.5 py-4 pr-0 pl-3 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                    <label for="firstName" class="self-stretch my-auto text-base text-justify text-gray-900">First Name</label>
+                                    <div class="flex gap-2 items-center self-stretch my-auto">
+                                      <span id="firstName" class="self-stretch my-auto text-base text-justify text-gray-400">User</span>
+                                      <button class="flex overflow-hidden gap-2.5 justify-center items-center self-stretch my-auto rounded-md bg-white bg-opacity-10 h-[26px] min-h-[26px] w-[26px]" aria-label="Copy first name">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3060e10177af4214b510196d930dd7941326f094eeb7bc5e000698cbd7226e9d?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain self-stretch my-auto w-3 aspect-square fill-gray-900" />
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-10 justify-between items-center py-2.5 py-4 pr-0 pl-3 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                    <label for="lastName" class="self-stretch my-auto text-base text-justify text-gray-900">Last Name</label>
+                                    <div class="flex gap-2 items-center self-stretch my-auto">
+                                      <span id="lastName" class="self-stretch my-auto text-base text-justify text-gray-400">Name</span>
+                                      <button class="flex overflow-hidden gap-2.5 justify-center items-center self-stretch my-auto rounded-md bg-white bg-opacity-10 h-[26px] min-h-[26px] w-[26px]" aria-label="Copy last name">
+                                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3060e10177af4214b510196d930dd7941326f094eeb7bc5e000698cbd7226e9d?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain self-stretch my-auto w-3 aspect-square fill-gray-900" />
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
+                                    <label for="email" class="self-stretch my-auto text-justify text-gray-900">Email</label>
+                                    <div class="flex gap-2 items-center self-stretch my-auto min-w-[240px]">
+                                      <span id="email" class="self-stretch my-auto text-justify text-gray-400">johndoe@gmail.com</span>
+                                      <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto font-medium leading-none text-center text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid">
+                                        Verify Account
+                                      </button>
+                                    </div>
+                                  </div>
+                                </section>
+                                <section class="flex flex-col mt-5 w-full text-base text-justify text-gray-900 h-[229px] max-md:max-w-full">
+                                  <header class="flex gap-10 justify-between items-center py-3.5 w-full text-lg font-semibold tracking-tight leading-loose border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                    <h2 class="flex gap-2 items-center self-stretch my-auto w-[221px]">
+                                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/79f15d320548c680ae04390c51b7aa3fedaa7fbab12215c940188aeebd0844a2?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-[1.14]" />
+                                      <span>Change password</span>
+                                    </h2>
+                                  </header>
+                                  <form>
+                                    <div class="flex gap-10 justify-between items-center py-2.5 py-4 pr-0 pl-3 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                      <label for="currentPassword" class="self-stretch my-auto">Enter Current Password</label>
+                                      <input type="password" id="currentPassword" value="********" class="gap-2 self-stretch my-auto whitespace-nowrap bg-transparent border-none" aria-label="Current password" />
+                                    </div>
+                                    <div class="flex gap-10 justify-between items-center py-2.5 py-4 pr-0 pl-3 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
+                                      <label for="newPassword" class="self-stretch my-auto">Enter New Password</label>
+                                      <input type="password" id="newPassword" value="********" class="gap-2 self-stretch my-auto whitespace-nowrap bg-transparent border-none" aria-label="New password" />
+                                    </div>
+                                    <div class="flex gap-2.5 items-center py-2.5 w-full font-medium leading-none text-center text-indigo-500 max-md:max-w-full">
+                                      <button type="submit" class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid">
+                                        Update Password
+                                      </button>
+                                    </div>
+                                  </form>
+                                </section>
+                                <div class="flex gap-2.5 items-center py-1.5 mt-5 w-full text-base font-medium leading-none text-center text-indigo-500 whitespace-nowrap min-h-[56px] max-md:max-w-full">
+                                  <button class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid">
+                                    Logout
+                                  </button>
                                 </div>
+                              </main>
+                            </section>
                             </section>
         
                             <!-- Subscription Section -->
@@ -156,7 +229,7 @@
  
         
       </div>
-      <div id="tab2" class="tab-content hidden">
+      <div id="tab4" class="tab-content hidden">
   
       
          
@@ -307,7 +380,7 @@
 
 
       </div>
-      <div id="tab4" class="tab-content hidden">
+      <div id="tab2" class="tab-content hidden">
       
              
            
@@ -441,13 +514,13 @@
       <!-- Modal Footer -->
       <div class="mt-6 flex justify-end">
         <button 
-          class="bg-blue-500 text-white py-2 px-4 rounded-md mr-2" 
+          class="overflow-hidden gap-2 me-5 self-stretch px-5 py-3.5 my-auto font-medium leading-none text-center text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid" 
           onclick="saveSettings()"
         >
           Save
         </button>
         <button 
-          class="bg-gray-500 text-white py-2 px-4 rounded-md" 
+          class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto font-medium leading-none text-center text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid" 
           onclick="toggleModal(false)"
         >
           Close
@@ -506,7 +579,6 @@
 
 
 
-
 <style>
     body {
        background-image: url(/assests/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
@@ -525,10 +597,156 @@
           <!-- Wrap the buttons and logo in a parent div with flexbox -->
           <div class="flex  items-center justify-between max-md:flex-row max-md:justify-center">
 
-           <!-- Image Button (Visible on md and below) -->
-<button id="menuButton"  class="block md:hidden order-1 " aria-label="Toggle Menu">
-<img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
+            <!-- Image Button (Visible on md and below) -->
+<button id="menuButton" class="block md:hidden order-1" aria-label="Toggle Menu">
+  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e9f83670864464dd838c38fba3b6f41ac21e91a5c70badf318112026f3ab993a?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="Menu Button" class="object-contain me-10 ms-2 my-auto w-[26px]" />
 </button>
+
+
+<!-- Slide Bar Section -->
+<section id="slideBar" class="fixed inset-y-0 left-0 z-30 flex flex-col w-3/4 max-w-[480px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto md:hidden">
+  <header class="flex flex-col items-start w-full">
+    <nav class="flex flex-col w-full bg-gray-50">
+      <!-- Slide Bar Content Here -->
+      <div class="flex flex-col justify-center px-4 py-7 w-full text-base font-medium leading-none text-gray-700 min-h-[80px]">
+        <div class="flex gap-10 justify-between items-center w-full">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1b4d3c5fef712d37244bf8a5ccf6020e64b7ff13d7eb5251ebea8160e858ffc8?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+          <div class="flex gap-2 items-center self-stretch my-auto">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb1016e4819cc29e45d9f6f0d418174a13ce7b90c2e9072e67606bf7d2b7c3de?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-[1.22] w-[22px]" />
+            <p class="self-stretch my-auto">Go Private</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start mx-4 text-base font-medium leading-none whitespace-nowrap">
+        <button id="historyButton"  class="flex overflow-hidden flex-1 shrink gap-1.5 justify-center items-center px-5 py-3 py-3.5 text-gray-700 bg-white rounded-lg border border-solid shadow-sm basis-0 min-h-[48px]">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f59b078cf6d4804fe7e5f9fe1300c41778620622192d727ad87a320f2574ffbe?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-[0.95] w-[21px]" />
+          <span>History</span>
+        </button>
+        <button id="menuButton" class="flex overflow-hidden flex-1 shrink gap-2 justify-center items-center px-5 py-3 py-3.5 text-white bg-indigo-600 rounded-none border border-indigo-600 border-solid shadow-sm basis-0 min-h-[48px]">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/85acb21de9defa20e208620411c601595b36d620822f7613d8c1480792ce8f1a?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+          <span>Explore</span>
+        </button>
+      </div>
+    </nav>
+    <main class="flex flex-col mx-4 mt-5">
+      <h1 class="text-lg font-semibold tracking-tight leading-loose text-gray-900">Explore</h1>
+      <section class="flex flex-col mt-2.5 w-full rounded-none">
+        <article class="flex flex-col justify-center px-3.5 py-5 bg-rose-500 rounded-lg">
+          <div class="flex flex-col w-full text-white">
+            <h2 class="text-lg font-bold tracking-tight leading-7">Addiction Recovery Mastery: Break Free and Reclaim Your Life</h2>
+            <p class="mt-1.5 text-xs font-medium leading-4">These prompts offer actionable strategies, emotional support, and expert guidance to help you overcome prevalent addictions and reclaim your well-being.</p>
+          </div>
+          <button class="overflow-hidden gap-1.5 self-stretch px-3 py-2 mt-3.5 w-full text-xs font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg shadow">Explore</button>
+        </article>
+      </section>
+      <section class="flex flex-col mt-2.5 w-full rounded-none">
+        <article class="flex flex-col justify-center px-3.5 py-5 bg-amber-500 rounded-lg">
+          <div class="flex flex-col w-full text-white">
+            <h2 class="text-lg font-bold tracking-tight leading-7">Emotional Regulation & Behavioral Control</h2>
+            <p class="mt-1.5 text-xs font-medium leading-4">This category offers prompts to help you manage emotions, control impulses, and develop healthier coping strategies for stress, anxiety, anger, and interpersonal challenges.</p>
+          </div>
+          <button class="overflow-hidden gap-1.5 self-stretch px-3 py-2 mt-3.5 w-full text-xs font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg shadow">Explore</button>
+        </article>
+      </section>
+      <section class="flex flex-col mt-2.5 w-full rounded-none">
+        <article class="flex flex-col justify-center px-3.5 py-5 bg-cyan-500 rounded-lg">
+          <div class="flex flex-col w-full text-white">
+            <h2 class="text-lg font-bold tracking-tight leading-7">Immediate Guidance & Crisis Support</h2>
+            <p class="mt-1.5 text-xs font-medium leading-4">This category offers urgent, practical prompts to help you manage intense emotional states, make safe decisions, and find immediate relief during moments of crisis.</p>
+          </div>
+          <button class="overflow-hidden gap-1.5 self-stretch px-3 py-2 mt-3.5 w-full text-xs font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg shadow">Explore</button>
+        </article>
+      </section>
+      <section class="flex flex-col mt-2.5 w-full rounded-none mb-2.5">
+        <article class="flex flex-col px-3.5 pt-5 pb-3 bg-emerald-500 rounded-lg">
+          <div class="flex flex-col w-full text-white">
+            <h2 class="text-lg font-bold tracking-tight leading-loose">Digital Companionship</h2>
+            <p class="mt-1.5 text-xs font-medium leading-4">This category offers a unique selection of prompts designed to provide emotional companionship, validation, and support.</p>
+          </div>
+          <button id="exploreButton" class="overflow-hidden gap-1.5 self-stretch px-3 py-2 mt-3.5 w-full text-xs font-medium leading-none text-center text-indigo-500 whitespace-nowrap bg-white rounded-lg shadow">Explore</button>
+        </article>
+      </section>
+
+
+
+
+
+
+
+
+
+
+   <!-- Slide Bar 2 Section (History) -->
+<section id="slideBartwo" class="hidden fixed inset-y-0 left-0 z-30 flex flex-col w-3/4 max-w-[480px] bg-white transition-transform duration-300 overflow-y-auto md:hidden">
+          <div class="flex flex-col items-start w-full ">
+            <div class="flex flex-col pb-3 w-full bg-gray-50">
+              <header class="flex flex-col justify-center px-4 py-7 w-full text-base font-medium leading-none text-gray-700 min-h-[80px]">
+                <div class="flex gap-10 justify-between items-center w-full">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/83ccf447d8a0642c254aa6422663102e068c1ce9229b430952b74b8735b7c45a?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                  <div class="flex gap-2 items-center self-stretch my-auto">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/29314c00b6d1806f2a622aedcd412194cbb7485c2fd193eead4555da0e510ea6?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-[1.22] w-[22px]" />
+                    <span class="self-stretch my-auto">Go Private</span>
+                  </div>
+                </div>
+              </header>
+              <nav class="flex items-start mx-4 text-base font-medium leading-none whitespace-nowrap">
+                  <button id="historyButton"  class="flex overflow-hidden flex-1 shrink gap-1.5 justify-center items-center px-5 py-3 py-3.5 text-gray-700 bg-white rounded-lg border border-solid shadow-sm basis-0 min-h-[48px]">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f59b078cf6d4804fe7e5f9fe1300c41778620622192d727ad87a320f2574ffbe?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-[0.95] w-[21px]" />
+                      <span>History</span>
+                    </button>
+                    <button id="menuButton" class="flex overflow-hidden flex-1 shrink gap-2 justify-center items-center px-5 py-3 py-3.5 text-white bg-indigo-600 rounded-none border border-indigo-600 border-solid shadow-sm basis-0 min-h-[48px]">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/85acb21de9defa20e208620411c601595b36d620822f7613d8c1480792ce8f1a?placeholderIfAbsent=true&apiKey=349b113878b744f099d317749eba7c77" alt="" class="object-contain shrink-0 self-stretch my-auto aspect-square w-[22px]" />
+                      <span>Explore</span>
+                    </button>
+              </nav>
+              <main class="flex flex-col mx-4 mt-5 w-full text-gray-900 max-w-[314px] min-h-[772px]">
+                <h2 class="text-lg font-semibold tracking-tight leading-loose">Chat History</h2>
+                <h3 class="gap-2.5 self-stretch px-2.5 mt-2.5 max-w-full text-xs font-semibold leading-loose whitespace-nowrap w-[267px]">Today</h3>
+                <ul class="flex flex-col mt-2.5 w-full text-sm leading-none">
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full bg-indigo-100 rounded-lg text-ellipsis">The Enlightenment's challenge to traditional authority.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">John Locke's influence on political theory.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Voltaire's critique of religion.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The role of reason in Enlightenment thought.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Montesquieu and the separation of powers.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Rousseau's social contract theory.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The impact of the Enlightenment on the French Revolution.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Salons and the spread of Enlightenment ideas.</li>
+                  <li class="gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Immanuel Kant's concept of enlightenment.</li>
+                </ul>
+                <section class="flex flex-col mt-2.5 w-full">
+                  <h3 class="flex-1 shrink gap-2.5 self-stretch px-2.5 w-full text-xs font-semibold leading-loose whitespace-nowrap">Yesterday</h3>
+                  <ul class="flex flex-col mt-1 w-full text-sm leading-none">
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The Encyclopédie and the spread of knowledge.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">David Hume's skepticism and the limits of reason.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The role of reason in Enlightenment thought.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Montesquieu and the separation of powers.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Rousseau's social contract theory.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The impact of the Enlightenment on the French Revolution.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Salons and the spread of Enlightenment ideas.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Immanuel Kant's concept of enlightenment.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">The scientific method and Enlightenment progress.</li>
+                    <li class="flex-1 shrink gap-2.5 self-stretch px-2.5 py-2 w-full text-ellipsis">Enlightenment contributions to human rights.</li>
+                  </ul>
+                </section>
+              </main>
+            </div>
+          </div>
+        </section>
+    </main>
+  </header>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -561,10 +779,55 @@
 
 
                 
-                  <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[36px]" aria-label="User Menu">
-                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="User Icon" class="object-contain self-stretch my-auto w-5 aspect-square" />
-                  </button>
-                  
+                <!-- User Menu Button -->
+      <div class="relative">
+        <button id="userMenuButton" class="flex justify-center items-center self-stretch p-2 h-full rounded-md shadow w-[46px]" aria-label="User Menu">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aec2ed337cfc348f135983fcd1baf781fb104608bae24b569054db1ac1dce0d?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-5 aspect-square" />
+        </button>
+    
+        <!-- Dropdown Menu -->
+        <div style="z-index: 1;" id="userDropdown" class="hidden absolute right-0 mt-5 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+          <nav class="flex flex-col p-2 bg-white rounded-lg shadow-lg max-w-[240px]">
+            <button id="settingsBtn" class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4336a7f3bbe0a9b419bf3651a67458a3c65af3432e98a7c6fded1d0aadc8a931?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Settings</span>
+            </button>
+            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe05ebcc47725b314cc87cd0601a76f25ddc081b1ec2384af7966c3841d029e5?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Help & Support</span>
+            </button>
+            <button class="flex gap-2 items-center p-2 mt-1 w-full text-base leading-none text-gray-800 whitespace-nowrap bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f2b7e60d17d50e34fc087ab60f74002863fc61ac11389e287b342df36e1d0a52?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Feedback</span>
+            </button>
+            <hr class="w-full min-h-0 bg-gray-200 border border-solid my-1" />
+            <button class="flex gap-2 items-center p-2 w-full text-base leading-none text-gray-800 bg-white rounded-lg">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4b9474ffe132ce66aabb558807168c3c0273b8314750849210b4af8e0f1f89ad?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" alt="" />
+              <span class="flex-1 text-start shrink self-stretch my-auto basis-0">Log Out</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    
+      <!-- JavaScript to toggle dropdown -->
+      <script>
+        const userMenuButton = document.getElementById('userMenuButton');
+        const userDropdown = document.getElementById('userDropdown');
+    
+        // Toggle dropdown visibility
+        userMenuButton.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevents the event from bubbling up
+          userDropdown.classList.toggle('hidden');
+        });
+    
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function (event) {
+          if (!userMenuButton.contains(event.target) && !userDropdown.contains(event.target)) {
+            userDropdown.classList.add('hidden');
+          }
+        });
+      </script>
 
                   
 
@@ -767,5 +1030,42 @@
       </section>
 
 
+
+
+
+
+      <script>
+        // JavaScript to toggle the visibility of slide bars
+        const menuButton = document.getElementById('menuButton');
+        const slideBar = document.getElementById('slideBar');
+        const slideBartwo = document.getElementById('slideBartwo');
+        const historyButton = document.getElementById('historyButton');
+      
+        // Toggle SlideBar
+        menuButton.addEventListener('click', () => {
+          slideBar.classList.toggle('-translate-x-full');
+          // Hide the second sidebar when the first is toggled
+          slideBartwo.classList.add('hidden');
+        });
+      
+        // Toggle History SlideBar
+        historyButton.addEventListener('click', () => {
+          slideBartwo.classList.toggle('hidden');
+          // Hide the first sidebar when the second is toggled
+          slideBar.classList.add('-translate-x-full');
+        });
+      
+        // Close slideBar if clicked outside of it
+        document.addEventListener('click', (event) => {
+          const isClickInsideSlideBar = slideBar.contains(event.target) || menuButton.contains(event.target);
+          const isClickInsideSlideBartwo = slideBartwo.contains(event.target) || historyButton.contains(event.target);
+      
+          // If the click is outside of the first slideBar and not on the history button/slideBartwo, close the first slideBar
+          if (!isClickInsideSlideBar && !isClickInsideSlideBartwo) {
+            slideBar.classList.add('-translate-x-full');
+          }
+        });
+      </script>
+      
 </body>
 </html>
