@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Latest Stories</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Hover effect on cards */
+    .article-card {
+      position: relative;
+   
+    }
+
+    .article-card:hover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.1); /* Subtle light overlay */
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+  <header class="flex justify-between items-center p-6 bg-gray-800">
+    <div class="flex items-center space-x-2">
+      <img style="width: 136px; height: 37px;" src="/assests/logo-light.png" alt="Beyond Happiness Logo" >
+    </div>
+    <nav class="flex items-center space-x-6">
+      <a class="text-gray-400 hover:text-gray-200" href="#">Blog</a>
+      <a class="text-gray-400 hover:text-gray-200" href="/theme/Dark-Theme-Website/Dark-Upgrade.html">Upgrade</a>
+      <a class="px-4 py-2 border border-purple-500 text-purple-500 rounded-full hover:bg-purple-600 hover:text-white" href="/Dark-mode.html">Open Chat</a>
+      <i class="fas fa-bars text-gray-400"></i>
+      <a href="/Blog/blog.html"><i class="fas fa-cog text-gray-600"></i></a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4">
+    <section class="text-center my-12">
+      <h2 class="text-gray-400">Blog</h2>
+      <h1 class="text-4xl font-semibold text-gray-100">Latest Stories</h1>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      <div  style="width: 508px; height: 308px;"   class="relative article-card">
+        <img alt="Abstract representation of AI revolutionizing emotional wellness" class="w-full h-full object-cover"  src="/assests/article-one.png" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-semibold">How AI is Revolutionizing Emotional Wellness: A New Era of Self-Care</h3>
+          <p class="text-gray-200 mt-2">Explore how AI can help people monitor, understand, and improve their emotional health...</p>
+        </div>
+      </div>
+      <div  style="width: 508px; height: 308px;" class="relative article-card">
+        <img alt="AI helping build better emotional resilience" class="w-full h-full object-cover"  src="/assests/article-two.png" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+          <h3 class="text-white text-xl font-semibold">5 Ways AI Can Help You Build Better Emotional Resilience</h3>
+          <p class="text-gray-200 mt-2">Discuss practical strategies for using AI to develop emotional resilience. Focus on features like perso...</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-6 text-gray-100">Other Articles</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI analyzing emotions" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/DUeaksutQEyXLKJE1Sx7H2T4Bvgf6fKSz4gGNFuol32geH2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">From Insight to Action: How AI Analyzes Emotions and Helps You Improve</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="Science behind emotion-tracking AI" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/cHhXJhPOZk4LBBgUlEm77VTQVzliPzCegFRV4hYmfyfXeH2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">The Science Behind Emotion-Tracking AI: How It Really Works</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI chatbots supporting mental health" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/fKhrUdybe8tfspBf28Zb0Xa1EXtd0qTxkgY77BhkVbIy8H2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">How AI Chatbots Can Support Mental Health: What the Research Says</h3>
+          </div>
+        </div>
+
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI analyzing emotions" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/DUeaksutQEyXLKJE1Sx7H2T4Bvgf6fKSz4gGNFuol32geH2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">From Insight to Action: How AI Analyzes Emotions and Helps You Improve</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="Science behind emotion-tracking AI" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/cHhXJhPOZk4LBBgUlEm77VTQVzliPzCegFRV4hYmfyfXeH2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">The Science Behind Emotion-Tracking AI: How It Really Works</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI chatbots supporting mental health" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/fKhrUdybe8tfspBf28Zb0Xa1EXtd0qTxkgY77BhkVbIy8H2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">How AI Chatbots Can Support Mental Health: What the Research Says</h3>
+          </div>
+        </div>
+
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI analyzing emotions" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/DUeaksutQEyXLKJE1Sx7H2T4Bvgf6fKSz4gGNFuol32geH2OB.jpg"/>
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">From Insight to Action: How AI Analyzes Emotions and Helps You Improve</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="Science behind emotion-tracking AI" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/cHhXJhPOZk4LBBgUlEm77VTQVzliPzCegFRV4hYmfyfXeH2OB.jpg" />
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">The Science Behind Emotion-Tracking AI: How It Really Works</h3>
+          </div>
+        </div>
+        <div style="width: 330.67px;
+        height: 200.48px;
+        " class="relative article-card">
+          <img alt="AI chatbots supporting mental health" class="w-full h-full object-cover"  src="https://storage.googleapis.com/a1aa/image/fKhrUdybe8tfspBf28Zb0Xa1EXtd0qTxkgY77BhkVbIy8H2OB.jpg"/>
+          <div class="absolute inset-0 bg-black bg-opacity-60 p-6 flex flex-col justify-end">
+            <h3 class="text-white text-lg font-semibold">How AI Chatbots Can Support Mental Health: What the Research Says</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center my-12">
+      <button class="px-6 py-2 border border-purple-500 text-purple-500 rounded-full hover:bg-purple-600 hover:text-white">Load More</button>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img style="width: 136px; height: 37px;" src="/assests/logo-light.png" alt="Beyond Happiness Logo" >
+      </div>
+      <div class="text-gray-400">
+        <a class="mr-4 hover:text-gray-200" href="#">Privacy Statement</a>
+        <a class="hover:text-gray-200" href="#">Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
