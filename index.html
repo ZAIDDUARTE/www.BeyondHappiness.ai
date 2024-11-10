@@ -515,7 +515,7 @@
       <div class="flex py-5 items-center justify-between w-full max-md:max-w-full">
         <!-- Logo (centered between buttons) -->
         <a class="ms-2" href="/index.html" style="cursor: pointer;">
-          <img loading="lazy"
+          <img style="width: 129px; height: 37px;" loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
             alt="Company Logo" class="object-contain w-[179px]" />
         </a>
@@ -530,67 +530,6 @@
             class="px-2 me-2 py-3.5 text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid whitespace-nowrap md:px-3 md:py-2">
             Create an Account
           </button>
-             <!-- Dropdown -->
-  <div style="z-index: 1;" class="relative inline-block text-left">
-    <div>
-      <button type="button" id="dropdownButton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Menu
-        <svg class="w-2.5 h-2.5 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Dropdown content -->
-    <div id="dropdownMenu" class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-      <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
-        <a href="/index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Light-welcome</a>
-        <a href="Dark-mode.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-welcome</a>
-        <a href="/loggedin-light.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Light-logged-welcome</a>
-        <a href="/theme/loggedin-Dark-Mode.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-logged-welcome</a>
-        <a href="/Chat's/Welcome-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-without login</a>
-        <a href="/Chat's/Loggedin-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-with login</a>
-        <a href="/Chat's/Premium-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat-premium</a>
-        <a href="/Main-Pages/Upgrade-tier's-page.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Upgrade page</a>
-       
-        <a href="/Chat's/Chat-Component's/Private-mode-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Private mode</a>
-        <a href="/Chat's/Chat-Component's/Explore-sub-category.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Explore subcategory</a>
-        <a href="/Chat's/Chat-Component's/Login-chat-history.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chat with history</a>
-        <a href="/Chat's/Chat-Component's/Logined-chat-reactions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login-chat-reaction</a>
-
-        <!-- Dark-Pages -->
-        <a href="/theme/Dark-Theme-Website/Dark-log-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-log-chat</a>
-        <a href="/theme/Dark-Theme-Website/Dark-prem-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-pro-chat</a>
-        <a href="/theme/Dark-Theme-Website/Dark-private.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-private</a>
-        <a href="/theme/Dark-Theme-Website/Dark-Upgrade.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-upgrade</a>
-        <a href="/theme/Dark-Theme-Website/Dark-wel-chat.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dark-wel-chat</a>
-
-        <!-- Settings-sections -->
-        <a href="/Settings-Pages/Account-Settings.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Acc settings</a>
-        <a href="/Settings-Pages/Help-support.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Help and support</a>
-        <a href="/Settings-Pages/Privacy-Data.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 3</a>
-        <a href="/Settings-Pages/Subscription.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 4</a>
-        <a href="/Settings-Pages/Theme.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Setting 5</a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Dropdown functionality
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-
-    dropdownButton.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
-        
         </div>
       </div>
 
@@ -622,7 +561,7 @@
                       <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
 
                         <div class="flex flex-col md:flex-row md:space-x-6">
-                          <article class="flex mb-3 flex-col justify-center self-stretch p-4 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid md:max-w-[calc(33.33%-1.5rem)] w-full">
+                          <article  class="flex mb-3 flex-col justify-center self-stretch p-4 bg-indigo-500 rounded-2xl border border-indigo-200 border-solid md:max-w-[calc(33.33%-1.5rem)] w-full">
                             <div class="flex flex-col my-3 w-full h-full py-5">
                               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/658ece32d9807ab10eac18dde7c06c11149fffbe788d6b85910f2e1312bfbe80?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
                               <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
@@ -650,7 +589,7 @@
                             <div class="flex flex-col w-full h-full">
                               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain mt-5 ms-5 w-8 aspect-square" />
                               <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                                Intellectual, Personal, and Creative Exploration
+                                Personal, Professional and Creative Exploration
                               </h2>
                               <p class="mt-3 mx-4 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
                                 Foster personal growth, professional development, and cognitive enhancement while inspiring fun, intellectual discovery, creativity, and exploration of curiosities.
@@ -669,15 +608,15 @@
   <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
       <div class="flex flex-wrap gap-4 justify-start w-full max-md:max-w-full">
         <div class="flex flex-col md:flex-row md:space-x-6">
-          <button class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[400px] mb-4 md:mb-0">
-            <span class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
+          <button  class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[389px] mb-4 md:mb-0">
+            <span  class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
           </button>
         
-          <button class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[400px] mb-4 md:mb-0">
+          <button class="flex flex-col shrink justify-center self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[389px] mb-4 md:mb-0">
             <span class="w-full">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
           </button>
         
-          <button class="flex flex-col shrink justify-center pb-10 self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[400px]">
+          <button class="flex flex-col shrink justify-center pb-10 self-start text-start p-5 bg-gray-100 rounded-2xl w-full md:w-auto max-w-[389px]">
             <span class="w-full">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
           </button>
         </div>
@@ -704,7 +643,7 @@
                     </form>
                     <p style="font-size: 10px;" class="self-center  mt-5  leading-snug text-center  max-md:max-w-full">
                       Our Al offers guidance but is not a substitute for professional therapy or medical advice.
-                      <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+                      <a id="termsButton" href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
                     </p>
                   </div>
                 </div>
@@ -717,6 +656,102 @@
 
 
 
+
+
+
+      <!-- Terms and Conditions Popup -->
+<div id="termsPopup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+  <div class="bg-white rounded-lg w-11/12 md:w-[800px] h-128 overflow-y-auto p-8 relative shadow-lg">
+    
+    <!-- Close Button -->
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 focus:outline-none text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Terms and Conditions Content -->
+    <section class="overflow-y-auto max-h-[500px]">
+      <div class="flex items-center space-x-2 mb-6">
+        <!-- Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+        <h2 class="text-2xl font-semibold text-blue-600">Terms and Conditions</h2>
+      </div>
+      <div class="text-gray-700 space-y-6 text-sm">
+        <ol class="list-decimal ml-5 space-y-4">
+          <li>
+            <strong>Acceptance of Terms</strong><br>
+            By accessing or using BeyondHappiness.ai (the "Service"), you ("User") agree to comply with and be bound by these Terms and Conditions (the "Terms"). If you do not agree to these Terms, you may not access or use the Service.
+          </li>
+          <li>
+            <strong>Eligibility</strong><br>
+            You must be at least 18 years old to use the Service. By using the Service, you represent and warrant that you meet this age requirement.
+          </li>
+          <li>
+            <strong>Services Provided</strong><br>
+            BeyondHappiness.ai provides users with personalized, AI-driven emotional wellness guidance and support (the "Content"). The Content is intended for informational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+          </li>
+          <li>
+            <strong>Disclaimer of Liability</strong><br>
+            BeyondHappiness.ai and its creators, employees, or agents are not licensed healthcare providers. The Content provided is not intended to diagnose, treat, cure, or prevent any medical condition. Users should seek the advice of a licensed healthcare provider if they have any questions regarding a medical condition. BeyondHappiness.ai assumes no responsibility or liability for any decisions made by the User based on the Content. Any actions taken based on the information provided by BeyondHappiness.ai are at the User's own risk.
+          </li>
+          <li>
+            <strong>Intellectual Property</strong><br>
+            All materials on BeyondHappiness.ai, including but not limited to text, graphics, logos, images, and software, are the property of BeyondHappiness.ai or its licensors and are protected by copyright, trademark, and other intellectual property laws. Users may not use, modify, or distribute any content from BeyondHappiness.ai without prior written permission.
+          </li>
+          <li>
+            <strong>User Conduct</strong><br>
+            By using the Service, you agree: Not to use the Service for any illegal purpose. Not to transmit any content that is unlawful, defamatory, or otherwise objectionable. Not to engage in activities that could harm the Service or its users. BeyondHappiness.ai reserves the right to remove any content or terminate access to users who violate these Terms.
+          </li>
+          <li>
+            <strong>Limitation of Liability</strong><br>
+            To the fullest extent permitted by law, BeyondHappiness.ai disclaims all warranties, express or implied, related to the accuracy, reliability, or availability of the Service. BeyondHappiness.ai is not liable for any damages resulting from your use or inability to use the Service, including but not limited to direct, indirect, incidental, or consequential damages.
+          </li>
+          <li>
+            <strong>Indemnification</strong><br>
+            You agree to indemnify and hold harmless BeyondHappiness.ai, its officers, directors, employees, and agents from any claims, damages, liabilities, or expenses arising from your use of the Service or your breach of these Terms.
+          </li>
+          <li>
+            <strong>Modifications to Terms</strong><br>
+            BeyondHappiness.ai reserves the right to modify these Terms at any time. We will notify users of significant changes by posting the updated Terms on our website. Continued use of the Service after any such changes constitutes your acceptance of the modified Terms.
+          </li>
+          <li>
+            <strong>Governing Law</strong><br>
+            These Terms are governed by the laws of the State of [Your State], without regard to its conflict of laws principles. Any disputes arising from these Terms or your use of BeyondHappiness.ai shall be resolved in the courts located in [Your State].
+          </li>
+          <li>
+            <strong>Contact Us</strong><br>
+            For questions about these Terms, please contact us at <a href="mailto:support@beyondhappiness.ai" class="text-blue-600 underline">support@beyondhappiness.ai</a>.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- JavaScript for Popup Functionality -->
+<script>
+  const termsButton = document.getElementById('termsButton');
+  const termsPopup = document.getElementById('termsPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  // Show popup
+  termsButton.addEventListener('click', () => {
+    termsPopup.classList.remove('hidden');
+  });
+
+  // Hide popup
+  closePopup.addEventListener('click', () => {
+    termsPopup.classList.add('hidden');
+  });
+
+  // Close popup when clicking outside the content
+  window.addEventListener('click', (e) => {
+    if (e.target === termsPopup) {
+      termsPopup.classList.add('hidden');
+    }
+  });
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
