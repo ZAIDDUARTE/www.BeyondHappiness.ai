@@ -5,500 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
 
 
-<!-- Trigger Button For Setting's Section -->
 
 
-<!-- Modal -->
-<div 
-  id="settingsModal" 
-  class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 hidden"
->
-  <div class="bg-white w-full max-w-4xl mx-auto rounded-lg shadow-lg p-6 flex">
-    <!-- Vertical Navigation -->
-    <div class="w-1/4 border-r pr-4">
-      <h2 class="text-lg font-semibold mb-4">Settings</h2>
-      <ul>
-        <li>
-          <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
-            onclick="showTab('tab1')" 
-            id="tab1Button"
-          >
-          Account Subscription
-          </button>
-        </li>
-        <li>
-          <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
-            onclick="showTab('tab2')" 
-            id="tab2Button"
-          >
-          Help & Support
-          </button>
-        </li>
-        <li>
-          <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
-            onclick="showTab('tab3')" 
-            id="tab3Button"
-          >
-          History
-          </button>
-        </li>
-        <li>
-          <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
-            onclick="showTab('tab4')" 
-            id="tab4Button"
-          >
-          Account Subscription
-          </button>
-        </li>
-        <li>
-          <button 
-            class="block w-full text-left py-2 px-3 text-gray-600 hover:bg-gray-100 rounded-md mb-2 focus:outline-none" 
-            onclick="showTab('tab5')" 
-            id="tab5Button"
-          >
-            Appearance
-          </button>
-        </li>
-        
-      </ul>
-    </div>
-
-    <!-- Modal Content -->
-    <div class="w-3/4 pl-6">
-      <div id="tab1" class="tab-content">
-     
-                        <!-- Content Section -->
-                        <div class="flex flex-col flex-1 shrink justify-center basis-0 min-w-[240px] max-md:max-w-full">
-                            <!-- Account Settings -->
-                            <section id="account-settings" class="content-section flex flex-col w-full min-h-[256px] max-md:max-w-full">
-                                <header class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
-                                    <h2 class="flex gap-2 items-center self-stretch my-auto">
-                                        <span class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]">
-                                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/70170161443942cdc1701dc85e1e41322f3b48946efd315aca86f35a8c6f640b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900" />
-                                        </span>
-                                        <span class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900">Account Subscription</span>
-                                    </h2>
-                                </header>
-                                <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
-                                    <p class="self-stretch my-auto text-justify text-gray-900">Free Plan</p>
-                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50">
-                                        <button class="gap-2 self-stretch px-5 py-3.5 my-auto bg-indigo-500 rounded-lg border border-indigo-500 border-solid">Upgrade to Premium</button>
-                                    </div>
-                                </div>
-                            </section>
-        
-                            <!-- Subscription Section -->
-                            <section id="subscription" class="content-section hidden flex-col w-full min-h-[256px] max-md:max-w-full">
-                                <header class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
-                                    <h2 class="flex gap-2 items-center self-stretch my-auto">
-                                        <span class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]">
-                                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/25ea79454e68a64ed57871b3cd519734b5b0c3015de8af4797b014684cae4078?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900" />
-                                        </span>
-                                        <span class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900">Subscription Details</span>
-                                    </h2>
-                                </header>
-                                <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
-                                    <p class="self-stretch my-auto text-justify text-gray-900">Your subscription is active.</p>
-                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50">
-                                        <button class="gap-2 self-stretch px-5 py-3.5 my-auto bg-red-500 rounded-lg border border-red-500 border-solid">Cancel Subscription</button>
-                                    </div>
-                                </div>
-                            </section>
-        
-                            <!-- Privacy and Data Section -->
-                            <section id="privacy" class="content-section hidden flex-col w-full min-h-[256px] max-md:max-w-full">
-                                <header class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
-                                    <h2 class="flex gap-2 items-center self-stretch my-auto">
-                                        <span class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]">
-                                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/66075d7c13ca95fd9c7fc61987852750455a0a69ab1b5428de20e1d545eeeb8f?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900" />
-                                        </span>
-                                        <span class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900">Privacy and Data</span>
-                                    </h2>
-                                </header>
-                                <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
-                                    <p class="self-stretch my-auto text-justify text-gray-900">Manage your privacy settings.</p>
-                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50">
-                                        <button class="gap-2 self-stretch px-5 py-3.5 my-auto bg-gray-500 rounded-lg border border-gray-500 border-solid">Update Privacy Settings</button>
-                                    </div>
-                                </div>
-                            </section>
-        
-                            <!-- Help & Support Section -->
-                            <section id="support" class="content-section hidden flex-col w-full min-h-[256px] max-md:max-w-full">
-                                <header class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full">
-                                    <h2 class="flex gap-2 items-center self-stretch my-auto">
-                                        <span class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]">
-                                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/160f39ebd71d5168325d907d6a0631b1dc5c2ae69a663b4bb9d76c265ab3a8b9?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900" />
-                                        </span>
-                                        <span class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900">Help & Support</span>
-                                    </h2>
-                                </header>
-                                <div class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full">
-                                    <p class="self-stretch my-auto text-justify text-gray-900">Need assistance? Contact our support team.</p>
-                                    <div class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50">
-                                        <button class="gap-2 self-stretch px-5 py-3.5 my-auto bg-blue-500 rounded-lg border border-blue-500 border-solid">Contact Support</button>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                  
-                
- 
-        
-      </div>
-      <div id="tab2" class="tab-content hidden">
-  
-      
-         
-          
-              <div class="flex flex-col w-full max-md:max-w-full">
-                <header
-                  class="flex gap-10 justify-between items-center py-3.5 w-full text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900 border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full"
-                >
-                  <h2 class="flex gap-2 items-center self-stretch my-auto">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb2f75687d3fa49c0f622e9eff402d2cb04cab04767a0e6ac23c618d95b40a35?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                      class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
-                      alt=""
-                    />
-                    <span class="self-stretch my-auto">Help & Support</span>
-                  </h2>
-                  <div
-                    class="flex gap-2 self-stretch my-auto min-h-[16px]"
-                  ></div>
-                </header>
-                <div
-                  class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full"
-                >
-                  <p class="self-stretch my-auto text-justify text-gray-900">
-                    hello@beyondhapiness
-                  </p>
-                  <div
-                    class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-indigo-500"
-                  >
-                    <button
-                      class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                    >
-                      Send Email
-                    </button>
-                  </div>
-                </div>
-                <div
-                  class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full max-md:max-w-full"
-                >
-                  <div
-                    class="flex gap-3 items-center self-stretch my-auto w-[216px]"
-                  >
-                    <p
-                      class="self-stretch my-auto text-base text-justify text-gray-900"
-                    >
-                      Chat Us
-                    </p>
-                    <span
-                      class="gap-1 self-stretch px-1.5 my-auto text-xs font-semibold tracking-wider leading-loose text-gray-50 uppercase bg-indigo-500 rounded-sm h-[18px]"
-                    >
-                      24/7 Support
-                    </span>
-                  </div>
-                  <div
-                    class="flex gap-2 items-center self-stretch my-auto text-base font-medium leading-none text-center text-indigo-500"
-                  >
-                    <button
-                      class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                    >
-                      Chat Us
-                    </button>
-                  </div>
-                </div>
-              </div>
-      </div>
-      <div id="tab3" class="tab-content hidden">
-
-
-   
-    
-        <h2 class="flex gap-2 items-center self-stretch my-auto">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e011a5464c4dace8870af75f21dacbba6c85283eb86fbf0dd43214bbcaaf8857?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-            alt=""
-            class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
-          />
-          <span class="self-stretch my-auto">History</span>
-        </h2>
-        <div class="flex gap-2 self-stretch my-auto min-h-[16px]"></div>
-      </header>
-      <div
-        class="flex flex-col py-3 w-full text-xs text-start leading-loose text-gray-900 max-md:max-w-full"
-      >
-        <p class="max-md:max-w-full">
-          Are you sure you want to delete your chat history?
-        </p>
-        <p class="mt-2 leading-5 max-md:max-w-full">
-          Once deleted, all conversations will be permanently removed from
-          your account and cannot be recovered. This action will also erase
-          any associated data, including media and files shared in chats.
-        </p>
-        <p class="mt-2 max-md:max-w-full">
-          If you're certain, please confirm below.
-        </p>
-      </div>
-      <div
-        class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full"
-      >
-        <span class="self-stretch my-auto text-justify text-gray-900"
-          >History</span
-        >
-        <button
-          class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid text-indigo-500 font-medium leading-none text-center"
-        >
-          Clear Chat History
-        </button>
-      </div>
-    </section>
-    <section
-      class="flex flex-col mt-5 w-full min-h-[117px] max-md:max-w-full"
-    >
-      <header
-        class="flex gap-10 justify-between items-center py-3.5 w-full border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full"
-      >
-        <h2 class="flex gap-2 items-center self-stretch my-auto">
-          <div
-            class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]"
-          >
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/25ea79454e68a64ed57871b3cd519734b5b0c3015de8af4797b014684cae4078?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-              alt=""
-              class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900"
-            />
-          </div>
-          <span
-            class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900"
-            >Legal</span
-          >
-        </h2>
-        <div class="flex gap-2 self-stretch my-auto min-h-[16px]"></div>
-      </header>
-      <div
-        class="flex gap-10 justify-between items-center pt-4 pl-3 w-full h-14 text-base max-md:max-w-full"
-      >
-        <span class="self-stretch my-auto text-justify text-gray-900"
-          >Privacy Statement / Policy</span
-        >
-        <button
-          class="overflow-hidden  gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid text-indigo-500 font-medium leading-none text-center whitespace-nowrap"
-        >
-          Read
-        </button>
-      </div>
- 
-
-
-      </div>
-      <div id="tab4" class="tab-content hidden">
-      
-             
-           
-                <h2 class="flex gap-2 items-center self-stretch my-auto">
-                  <span
-                    class="flex gap-2.5 justify-center items-center self-stretch my-auto w-5 min-h-[20px]"
-                  >
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/25ea79454e68a64ed57871b3cd519734b5b0c3015de8af4797b014684cae4078?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                      alt=""
-                      class="object-contain self-stretch my-auto w-4 aspect-square stroke-[1.5px] stroke-gray-900"
-                    />
-                  </span>
-                  <span
-                    class="self-stretch my-auto text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900"
-                    >Account Subscription</span
-                  >
-                </h2>
-              </header>
-              <div
-                class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full"
-              >
-                <p class="self-stretch my-auto text-justify text-gray-900">
-                  Free Tier
-                </p>
-                <div
-                  class="flex gap-2 items-center self-stretch my-auto font-medium leading-none text-center text-gray-50"
-                >
-                  <button
-                    class="gap-2 self-stretch px-5 py-3.5 my-auto bg-indigo-500 rounded-lg border border-indigo-500 border-solid"
-                  >
-                    Upgrade to Premium
-                  </button>
-                </div>
-              </div>
-            </section>
-            <section
-              class="flex flex-col mt-5 w-full min-h-[256px] max-md:max-w-full"
-            >
-              <header
-                class="flex gap-10 justify-between items-center py-3.5 w-full text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900 border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full"
-              >
-                <h2 class="flex gap-2 items-center self-stretch my-auto w-[221px]">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/79f15d320548c680ae04390c51b7aa3fedaa7fbab12215c940188aeebd0844a2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                    alt=""
-                    class="object-contain shrink-0 self-stretch my-auto w-4 aspect-[1.14]"
-                  />
-                  <span class="self-stretch my-auto">Payment Methods</span>
-                </h2>
-              </header>
-              <div
-                class="flex gap-2.5 items-center py-2.5 w-full text-base font-medium leading-none text-center text-indigo-500 max-md:max-w-full"
-              >
-                <button
-                  class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                >
-                  Add Payment Method
-                </button>
-              </div>
-            </section>
-     
-      </div>
-      <div id="tab5" class="tab-content hidden">
-       
-         
-        
-              <div class="flex flex-col w-full max-md:max-w-full">
-                <header
-                  class="flex gap-10 justify-between items-center py-3.5 w-full text-lg font-semibold tracking-tight leading-loose text-justify text-gray-900 whitespace-nowrap border-b border-solid border-b-gray-300 min-h-[56px] max-md:max-w-full"
-                >
-                  <h2 class="flex gap-2 items-center self-stretch my-auto">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/1306a82a0a34b897f656787220d0f75f52105f3f1d4eb01c85039f023ae56ab3?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-                      class="object-contain shrink-0 self-stretch my-auto w-4 aspect-square"
-                      alt=""
-                    />
-                    <span>Theme</span>
-                  </h2>
-                </header>
-                <div
-                  class="flex gap-10 justify-between items-center py-2.5 pl-3 w-full text-base max-md:max-w-full"
-                >
-                  <span class="self-stretch my-auto text-justify text-gray-900"
-                    >Light Mode</span
-                  >
-                  <div
-                    class="flex gap-3 items-center self-stretch my-auto font-medium leading-none text-center text-indigo-500 whitespace-nowrap min-w-[240px]"
-                  >
-                    <button
-                      class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                    >
-                      Light
-                    </button>
-                    <button
-                      class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                    >
-                      Dark
-                    </button>
-                    <button
-                      class="overflow-hidden gap-2 self-stretch px-5 py-3.5 my-auto bg-white rounded-lg border border-indigo-500 border-solid"
-                    >
-                      System
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-     
-     
-
-
-
-      <div id="tab6" class="tab-content hidden">
-        <h3 class="text-xl font-semibold mb-2">Language Settings</h3>
-        <p>Content for Language settings goes here.</p>
-      </div>
-      <div id="tab7" class="tab-content hidden">
-        <h3 class="text-xl font-semibold mb-2">Security Settings</h3>
-        <p>Content for Security settings goes here.</p>
-      </div>
-      <div id="tab8" class="tab-content hidden">
-        <h3 class="text-xl font-semibold mb-2">Accessibility Settings</h3>
-        <p>Content for Accessibility settings goes here.</p>
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="mt-6 flex justify-end">
-        <button 
-          class="bg-blue-500 text-white py-2 px-4 rounded-md mr-2" 
-          onclick="saveSettings()"
-        >
-          Save
-        </button>
-        <button 
-          class="bg-gray-500 text-white py-2 px-4 rounded-md" 
-          onclick="toggleModal(false)"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- JavaScript for Tab Switching and Modal Toggling -->
-<script>
-  function toggleModal(show) {
-    const modal = document.getElementById('settingsModal');
-    modal.classList.toggle('hidden', !show);
-  }
-
-  function showTab(tabId) {
-    // Hide all tabs
-    document.querySelectorAll('.tab-content').forEach((tab) => {
-      tab.classList.add('hidden');
-    });
-
-    // Show the selected tab
-    document.getElementById(tabId).classList.remove('hidden');
-
-    // Reset active button styles
-    document.querySelectorAll('button[id$="Button"]').forEach((btn) => {
-      btn.classList.remove('bg-gray-200');
-    });
-
-    // Highlight the active tab button
-    document.getElementById(tabId + 'Button').classList.add('bg-gray-200');
-  }
-
-  function saveSettings() {
-    // Logic for saving settings
-    alert('Settings Saved!');
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Custom Body Style's -->
 <style>
-  
     body {
        background-image: url(/assests/Firefox_Screenshot_2024-09-24T10-03-18.720Z.png);
        background-size: cover;
@@ -506,7 +22,7 @@
     }
   </style>
 
-  <section class="flex overflow-hidden flex-col">
+  <section   class="flex overflow-hidden flex-col">
     <div class="flex relative flex-col pb-5 w-full max-md:max-w-full">
       <!-- Background Image -->
       <img style="opacity: 0.1; z-index: -1;" loading="lazy"
@@ -516,170 +32,299 @@
       <div class="flex py-5 items-center justify-between w-full max-md:max-w-full">
         <!-- Logo (centered between buttons) -->
         <a class="ms-2" href="/index.html" style="cursor: pointer;">
-          <img  style="width: 129px; height: 37px;" loading="lazy"
+          <img style="width: 129px; height: 37px;" loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6f4ef370376db6ee1260c6ecc75454a383b138b245a36651cdce49a40dba55b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85"
-            alt="Company Logo" class="object-contain w-[179px]" />
+            alt="Company Logo" class="object-contain w-[129px]" />
         </a>
   
         <!-- Navigation with "Login" and "Create an Account" Buttons -->
-        <div class="flex ms-5 gap-2.5 items-center">
-          <button
-            class="px-2 py-3.5 text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid md:px-3 md:py-2">
-            Login
-          </button>
-          <button
-            class="px-2 me-2 py-3.5 text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid whitespace-nowrap md:px-3 md:py-2">
-            Create an Account
-          </button>
-        </div>
-     
+        <div class="flex ms-5 gap-2.5 items-center relative">
+            <!-- Toggle Button for Dropdown on Small Screens -->
+            <button onclick="toggleDropdown()" class="md:hidden text-indigo-500 px-2 py-1 text-white border me-5 border-indigo-500 rounded-lg">
+              <i class="fas fa-bars"></i> <!-- Burger Icon for Dropdown -->
+            </button>
+          
+            <!-- Navigation Buttons (Visible on Larger Screens) -->
+            <div class="hidden md:flex gap-2.5 items-center">
+              <button style="width: 83px; height: 47px;"
+                class="px-2  text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
+                Login
+              </button>
+          
+              <button style="width: 173px; height: 47px;"
+                class="px-2 text-indigo-500 bg-white rounded-lg border border-indigo-500 border-solid whitespace-nowrap">
+                Create an Account
+              </button>
+          
+              <!-- Sun Icon Link for Light Theme -->
+              <a href="/index.html" class="text-white flex items-center justify-center" style="width: 47px; height: 47px; border-radius: 8px; ">
+                <i class="fas fa-sun text-xl"></i>
+              </a>
+            </div>
+          
+            <!-- Dropdown Menu (Visible on Small Screens) -->
+            <div style="z-index: 1;" id="dropdownMenu" class="absolute me-20 right-0 mt-5  border border-gray-200 rounded-lg shadow-lg hidden md:hidden">
+              <button style="width: 20%;"
+                class="w-full px-4 py-2 text-indigo-500 text-left bg-white rounded-t-lg border-b border-indigo-500">
+                Login
+              </button>
+          
+              <button style="width: 100%;"
+                class="w-full px-4 py-2 text-indigo-500 text-left bg-white border-b border-indigo-500">
+                Create an Account
+              </button>
+          
+              <!-- Sun Icon Link for Light Theme -->
+              <a href="/index.html" class="block px-4 py-2 text-indigo-500 text-left bg-white rounded-b-lg">
+                <i class="fas fa-sun"></i> Light Theme
+              </a>
+            </div>
+          </div>
+          
+          <!-- JavaScript for Toggling Dropdown Menu -->
+          <script>
+            function toggleDropdown() {
+              const dropdown = document.getElementById("dropdownMenu");
+              dropdown.classList.toggle("hidden");
+            }
+          
+            // Close the dropdown if the user clicks anywhere outside the dropdown
+            window.addEventListener('click', function(event) {
+              const dropdown = document.getElementById("dropdownMenu");
+              const button = document.querySelector("button[onclick='toggleDropdown()']");
+              
+              if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.add("hidden");
+              }
+            });
+          </script>
+      </div>
 
-  <script>
-    // Dropdown functionality
-    const dropdownButton = document.getElementById('dropdownButton');
-    const dropdownMenu = document.getElementById('dropdownMenu');
 
-    dropdownButton.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
- 
-        </div>
+  
 
 
-
-
-
-
-
-          <main style="background: rgba(17, 24, 39, 0.7);" class="flex relative border bg-gray-50 border-transparent  rounded-2xl flex-wrap self-center max-w-[1400px] max-md:max-w-full md:px-20 px-0">
-           
-            <section 
- class="flex flex-col px-20 grow shrink-0 items-center  bg-transparent border border-transparent rounded-2xl   basis-0 w-fit max-md:px-5 max-md:max-w-full">
-              <div class="flex flex-col w-full max-w-[1338px] max-md:max-w-full">
+          <!-- MAIN SECTION START'S HERE -->
+          <main   class="flex border border-transparent  rounded-xl  relative flex-wrap self-center  max-w-[1400px] max-md:max-w-full  ">
+            
+            <section style="background: rgba(17, 24, 39, 0.7);" class="flex  flex-col grow shrink-0 items-center px-20 bg-transparent  border border-transparent  rounded-xl basis-0 w-fit max-md:px-5 max-md:max-w-full">
+              <div class="flex flex-col  w-full max-w-[1338px] max-md:max-w-full">
                 <div class="flex flex-col justify-center  w-full min-h-[814px] max-md:max-w-full">
                   <div class="flex flex-col w-full max-md:max-w-full">
-                    <header class="flex flex-col items-center w-full text-center text-white max-md:max-w-full">
-                      <h1 style="font-size: 40px; font-weight: 500;" class="text-5xl pt-20  tracking-tighter  leading-10 max-md:max-w-full hidden md:block">
+                    <header class="flex flex-col items-center w-full text-center text-gray-900 max-md:max-w-full">
+                      <h1 style="font-size: 40px; font-weight: 500;" class="text-5xl pt-20 text-white  tracking-tighter  leading-10 max-md:max-w-full hidden md:block">
                         Master Your Emotional Well-Being with Next-Gen AI
                     </h1>
                     
-                    <h1 style="font-weight: 500; font-size: 36px;" class="text-3xl tracking-tighter pt-5 leading-10 max-md:max-w-full md:hidden">
-                      Master Your Emotional Well-Being with Next-Gen AI
+                    <h1 style="font-weight: 500; font-size: 36px;" class="text-3xl text-white tracking-tighter pt-5 leading-10 max-md:max-w-full md:hidden">
+                      Master Your Emotional <br> Well-Being with <br> Next-Gen AI
                   </h1>
-                      <p class="mt-5 text-white text-base max-md:max-w-full">Your Personalized Emotional and Personal Growth Companion
-                    </p>
+                    
+                    
+                     
+                      <p class="mt-5 text-white max-md:max-w-full">Your Personalized Emotional and Personal Growth Companion</p>
                     </header>
                     <div class="flex flex-col mt-8 w-full max-md:max-w-full">
                       <div class="flex flex-wrap gap-4 w-full max-md:max-w-full">
-                        <article style="background: rgba(55, 65, 81, 1);" class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-transparent border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
-                          <div class="flex flex-col w-full py-2">
-                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c14428a764c6a052b8ca6afa883990e8eff674be1491ebebe878b6a77b2713b?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain w-8 aspect-square mt-5 ms-5" />
-                            <h2 class="mt-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                              Personalized, Adaptive Emotional Support
-                            </h2>
-                            <p class="mt-3 mb-5 mx-4 text-base leading-6 text-indigo-200 hidden md:block">
-                              Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
-                            </p>
-                          </div>
-                        </article>
-                    
-                        <article style="background: rgba(55, 65, 81, 1);" class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-transparent border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
-                          <div class="flex flex-col w-full py-2">
-                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 mt-5 w-8 aspect-square" />
-                            <h2 class="mt-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                              Proactive, Predictive Emotional Guidance
-                            </h2>
-                            <p class="mt-3 mx-4 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
-                              Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
-                            </p>
-                          </div>
-                        </article>
-                    
-                        <article style="background: rgba(55, 65, 81, 1);" class="flex flex-col justify-center self-stretch p-6 bg-indigo-500 rounded-2xl border border-transparent border-solid max-w-[337px] pb-[var(--sds-size-space-600)] pl-[var(--sds-size-space-600)] pr-[var(--sds-size-space-600)] pt-[var(--sds-size-space-600)]">
-                          <div class="flex flex-col w-full py-2">
-                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain mt-5 ms-5 w-8 aspect-square" />
-                            <h2 class="mt-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
-                              Intellectual, Personal, and Creative Exploration
-                            </h2>
-                            <p class="mt-3 mx-4 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
-                              Foster personal growth, professional development, and cognitive enhancement while inspiring fun, intellectual discovery, creativity, and exploration of curiosities.
-                            </p>
-                          </div>
-                        </article>
+
+                        <div class="flex flex-col md:flex-row md:space-x-6">
+                          <article style="background: rgba(55, 65, 81, 1);"   class="flex mb-3 flex-col justify-center self-stretch p-4 bg-indigo-500 rounded-2xl border border-indigo-200 border-transparent  md:max-w-[calc(33.33%-1.5rem)] w-full">
+                            <div class="flex flex-col w-full h-full">
+                              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/658ece32d9807ab10eac18dde7c06c11149fffbe788d6b85910f2e1312bfbe80?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                              <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                                Personalized, Adaptive Emotional Support
+                              </h2>
+                              <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                                Experience human-like, evidence-based emotional guidance that evolves with you, learning from your past to provide deeply personalized, context-aware support—in over 100 languages.
+                              </p>
+                            </div>
+                          </article>
+                        
+                          <article style="background: rgba(55, 65, 81, 1);"  class="flex  mb-3 flex-col justify-center self-stretch p-4 bg-indigo-500 rounded-2xl border border-indigo-200 border-transparent  md:max-w-[calc(33.33%-1.5rem)] w-full">
+                            <div class="flex flex-col w-full h-full">
+                              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1e701b68544a9f95f3285b39737e887d98aa63987fb6ef9da3ce9cfb6ba54c2?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                              <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                               Adaptive Emotional Support & Empathetic Conversations
+                              </h2>
+                              <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                                Anticipate your emotional needs with AI that analyzes patterns and trends, offering preventive support before challenges escalate.
+                              </p>
+                            </div>
+                          </article>
+                        
+                          <article style="background: rgba(55, 65, 81, 1);"  class="flex  mb-3 flex-col justify-center self-stretch p-4 bg-indigo-500 rounded-2xl border border-indigo-200 border-transparent  md:max-w-[calc(33.33%-1.5rem)] w-full">
+                            <div class="flex flex-col w-full h-full">
+                              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6956f3757af30b29fed53a436bd94c055aed1636ac1085bcd0c051aa62fd44cd?placeholderIfAbsent=true&apiKey=3879a18f49be423fa8a3d20e87653b85" alt="" class="object-contain ms-5 w-8 mt-2 aspect-square" />
+                              <h2 class="my-3 text-lg font-semibold tracking-tight ms-5 leading-7 text-gray-50">
+                                Personal, Professional and Creative Exploration
+                              </h2>
+                              <p class="mt-3 ms-5 mb-5 text-base leading-6 text-indigo-200 hidden md:block">
+                                Foster personal growth, professional development, and cognitive enhancement while inspiring fun, intellectual discovery, creativity, and exploration of curiosities.
+                              </p>
+                            </div>
+                          </article>
+                  
+                        
                       </div>
-                    </div>
-                    
-                    <div class="flex flex-col mt-8 w-full font-medium max-md:max-w-full hidden md:flex">
-                      <h3 class="flex-1 shrink w-full text-lg tracking-tight leading-loose text-gray-400 max-md:max-w-full">
-                        Start by asking...
-                      </h3>
-                      <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
-                        <div class="flex flex-wrap gap-4 justify-center w-full max-md:max-w-full">
-                          <button style="width: 320px; font-weight: 400;" class="flex flex-col flex-1 shrink justify-center self-start text-start p-5 bg-transparent border border-neutral-600 border-1 text-white rounded-2xl basis-0 min-w-[240px]">
-                            <span style="color: #D1D5DB; font-weight: 400;" class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
-                          </button>
-                          <button style="width: 320px; font-weight: 400;" class="flex flex-col flex-1 shrink justify-center self-start text-start p-5 bg-transparent border border-neutral-600 border-1 text-white rounded-2xl basis-0 min-w-[240px]">
-                            <span style="color: #D1D5DB; font-weight: 400;" class="w-full">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
-                          </button>
-                          <button style="width: 320px; font-weight: 400;" class="flex flex-col flex-1 shrink justify-center self-start text-start  p-5 bg-transparent border border-neutral-600 border-1 text-white rounded-2xl basis-0 min-w-[240px]">
-                            <span style="color: #D1D5DB; font-weight: 400;" class="w-full pb-1">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
-                          </button>
-                        </div>
-                      </div>
-                      <button class="overflow-hidden gap-1.5 self-center px-3 py-2 mt-6 text-xs leading-none text-center text-white bg-transparent rounded-lg border border-1 shadow">
-                        Explore More
-                      </button>
-                    </div>
-                    
-                    <div class="flex gap-3 justify-center self-center py-3 w-full">
-                      <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
-                        <form class="flex flex-wrap mt-10 gap-3 w-full min-h-[60px] max-md:max-w-full  md:mb-0">
-                          <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
-                          <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-gray-400 bg-white rounded-lg border border border-solid basis-4  max-md:max-w-full" />
-                          <button type="submit" class="gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-solid">
-                            Send
-                          </button>
-                         
-                        </form>
-                        <p style="font-size: 10px;" class="self-center text-white  mt-5  leading-snug text-center  max-md:max-w-full">
-                          Our Al offers guidance but is not a substitute for professional therapy or medical advice.
-                          <a href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
-                        </p>
-                      </div>
-                    </div>
                   </div>
-                </section>
-              </main>
-            </div>
-          </section>
+                  
+<div class="hidden md:block flex flex-col mt-8 w-full font-medium max-md:max-w-full">
+  <h3 class="flex-1 shrink w-full text-lg tracking-tight leading-loose text-gray-400 max-md:max-w-full">
+      Start by asking...
+  </h3>
+  <div class="flex flex-col mt-6 w-full text-base leading-6 text-gray-900 max-md:max-w-full">
+      <div class="flex flex-wrap gap-4 justify-start w-full max-md:max-w-full">
+        <div class="flex flex-col md:flex-row md:space-x-6">
+          <button  class="flex flex-col shrink justify-center self-start text-start p-5 bg-transparent  rounded-2xl w-full md:w-auto max-w-[389px] mb-4 md:mb-0 border border-neutral-600 text-neutral-300">
+            <span  class="w-full">What's one simple thing I can do today to reclaim some energy and restore balance in my work-life routine?</span>
+          </button>
+        
+          <button class="flex flex-col shrink justify-center self-start text-start p-5 bg-transparent text-neutral-300 rounded-2xl w-full md:w-auto max-w-[389px] mb-4 md:mb-0 border border-neutral-600">
+            <span class="w-full">How can I start recognizing my skills and achievements instead of always feeling like I'm falling behind?</span>
+          </button>
+        
+          <button class="flex flex-col shrink justify-center pb-10 self-start text-start p-5 bg-transparent text-neutral-300 rounded-2xl w-full md:w-auto max-w-[389px] border border-neutral-600">
+            <span class="w-full">I’m feeling really overwhelmed. What’s a quick way to ground myself and get back on track?</span>
+          </button>
+        </div>
+        
+
+      </div>
+  </div>
+  <center><button class="overflow-hidden gap-1.5 self-center px-3 py-2 mt-6 text-xs leading-none text-center text-black bg-transparent rounded-lg border border border-neutral-600 text-neutral-300 ">
+      Explore More
+  </button></center>
+</div>    
+
+
+
+                <div class="flex gap-3 justify-center self-center py-3 w-full">
+                  <div class="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
+                    <form class="flex flex-wrap mt-10 gap-3 w-full min-h-[60px] max-md:max-w-full  md:mb-0">
+                      <label for="messageInput" class="sr-only">Type your message in over 100 languages...</label>
+                      <input id="messageInput" type="text" placeholder="Type your message in over 100 languages..." class="flex flex-1 shrink gap-3 items-center px-3 py-2 h-full text-sm leading-none text-dark  rounded-lg border border border-transparent  basis-4  max-md:max-w-full" />
+                      <button type="submit" class="gap-2 self-stretch px-5 py-3.5 h-full text-base font-medium leading-none text-center text-white whitespace-nowrap bg-indigo-500 rounded-lg border border-indigo-500 border-transparent ">
+                        Send
+                      </button>
+                     
+                    </form>
+                    <p style="font-size: 10px;" class="self-center  mt-5  leading-snug text-center text-white  max-md:max-w-full">
+                      Our Al offers guidance but is not a substitute for professional therapy or medical advice.
+                      <a id="termsButton" href="#" class="text-indigo-500 underline">Learn more about our terms and limitations here.</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
 
 
 
 
 
+
+
+      <!-- Terms and Conditions Popup -->
+<div id="termsPopup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+  <div class=" rounded-lg w-11/12 md:w-[800px] h-128 overflow-y-auto p-8 bg-black text-white relative shadow-lg">
+    
+    <!-- Close Button -->
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-600 hover:text-gray-800 focus:outline-none text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Terms and Conditions Content -->
+    <section class="overflow-y-auto text-white max-h-[500px]">
+      <div class="flex items-center text-white space-x-2 mb-6">
+        <!-- Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+        <h2 class="text-2xl font-semibold text-blue-600">Terms and Conditions</h2>
+      </div>
+      <div class="text-white space-y-6 text-sm">
+        <ol class="list-decimal ml-5 space-y-4">
+          <li>
+            <strong>Acceptance of Terms</strong><br>
+            By accessing or using BeyondHappiness.ai (the "Service"), you ("User") agree to comply with and be bound by these Terms and Conditions (the "Terms"). If you do not agree to these Terms, you may not access or use the Service.
+          </li>
+          <li>
+            <strong>Eligibility</strong><br>
+            You must be at least 18 years old to use the Service. By using the Service, you represent and warrant that you meet this age requirement.
+          </li>
+          <li>
+            <strong>Services Provided</strong><br>
+            BeyondHappiness.ai provides users with personalized, AI-driven emotional wellness guidance and support (the "Content"). The Content is intended for informational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment.
+          </li>
+          <li>
+            <strong>Disclaimer of Liability</strong><br>
+            BeyondHappiness.ai and its creators, employees, or agents are not licensed healthcare providers. The Content provided is not intended to diagnose, treat, cure, or prevent any medical condition. Users should seek the advice of a licensed healthcare provider if they have any questions regarding a medical condition. BeyondHappiness.ai assumes no responsibility or liability for any decisions made by the User based on the Content. Any actions taken based on the information provided by BeyondHappiness.ai are at the User's own risk.
+          </li>
+          <li>
+            <strong>Intellectual Property</strong><br>
+            All materials on BeyondHappiness.ai, including but not limited to text, graphics, logos, images, and software, are the property of BeyondHappiness.ai or its licensors and are protected by copyright, trademark, and other intellectual property laws. Users may not use, modify, or distribute any content from BeyondHappiness.ai without prior written permission.
+          </li>
+          <li>
+            <strong>User Conduct</strong><br>
+            By using the Service, you agree: Not to use the Service for any illegal purpose. Not to transmit any content that is unlawful, defamatory, or otherwise objectionable. Not to engage in activities that could harm the Service or its users. BeyondHappiness.ai reserves the right to remove any content or terminate access to users who violate these Terms.
+          </li>
+          <li>
+            <strong>Limitation of Liability</strong><br>
+            To the fullest extent permitted by law, BeyondHappiness.ai disclaims all warranties, express or implied, related to the accuracy, reliability, or availability of the Service. BeyondHappiness.ai is not liable for any damages resulting from your use or inability to use the Service, including but not limited to direct, indirect, incidental, or consequential damages.
+          </li>
+          <li>
+            <strong>Indemnification</strong><br>
+            You agree to indemnify and hold harmless BeyondHappiness.ai, its officers, directors, employees, and agents from any claims, damages, liabilities, or expenses arising from your use of the Service or your breach of these Terms.
+          </li>
+          <li>
+            <strong>Modifications to Terms</strong><br>
+            BeyondHappiness.ai reserves the right to modify these Terms at any time. We will notify users of significant changes by posting the updated Terms on our website. Continued use of the Service after any such changes constitutes your acceptance of the modified Terms.
+          </li>
+          <li>
+            <strong>Governing Law</strong><br>
+            These Terms are governed by the laws of the State of [Your State], without regard to its conflict of laws principles. Any disputes arising from these Terms or your use of BeyondHappiness.ai shall be resolved in the courts located in [Your State].
+          </li>
+          <li>
+            <strong>Contact Us</strong><br>
+            For questions about these Terms, please contact us at <a href="mailto:support@beyondhappiness.ai" class="text-blue-600 underline">support@beyondhappiness.ai</a>.
+          </li>
+        </ol>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- JavaScript for Popup Functionality -->
+<script>
+  const termsButton = document.getElementById('termsButton');
+  const termsPopup = document.getElementById('termsPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  // Show popup
+  termsButton.addEventListener('click', () => {
+    termsPopup.classList.remove('hidden');
+  });
+
+  // Hide popup
+  closePopup.addEventListener('click', () => {
+    termsPopup.classList.add('hidden');
+  });
+
+  // Close popup when clicking outside the content
+  window.addEventListener('click', (e) => {
+    if (e.target === termsPopup) {
+      termsPopup.classList.add('hidden');
+    }
+  });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
