@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Code Documentation</title>
+    <style>
+        /* TailwindCSS CDN */
+        @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+    
+        /* Custom Styles */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+    
+        h1, h2, h3 {
+            color: #FFD700; /* Dark yellow color for headings */
+        }
+    
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+    
+        h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        code {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    
+        pre {
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 1rem;
+        }
+    
+        .section {
+            margin-bottom: 3rem;
+        }
+    
+        .section-header {
+            font-size: 2rem;
+            font-weight: 600;
+            border-bottom: 3px solid #444;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    
+        .content {
+            margin-top: 1rem;
+            padding: 0 1rem;
+            line-height: 1.8;
+        }
+    
+        .subheader {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+    
+        .code-block {
+            background-color: #212121;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            overflow-x: auto;
+        }
+    
+        .responsive-table {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+    
+        .footer {
+            background-color: #1c1c1c;
+            color: #bbb;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 2px solid #444;
+        }
+    
+        /* Spacing and alignment improvements */
+        .section-content {
+            padding: 1rem;
+        }
+    
+        .section + .section {
+            margin-top: 2rem;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+    
+            .section-header {
+                font-size: 1.75rem;
+            }
+    
+            h1, h2, h3 {
+                font-size: 1.5rem;
+            }
+    
+            .content, .code-block {
+                padding: 1rem;
+            }
+    
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container mx-auto p-4">
+        <div class="section">
+            <h1 class="section-header">Project Directory Structure</h1>
+            <pre class="code-block">
+your_project/
+├── app.py
+├── burnout_response.py
+├── static/
+│   ├── index.html
+│   ├── Chat's/
+│   │   └── Welcome-chat.html
+│   └── styles.css
+├── tests/
+│   └── test_app.py
+├── .env
+└── requirements.txt
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Key Features of the Server</h2>
+            <ul class="content">
+                <li><strong>Static File Serving:</strong> Serves `index.html` and other static files from the `static` directory.</li>
+                <li><strong>Dynamic Chat Endpoint:</strong> A `/gpt4` endpoint that streams AI-generated chat responses.</li>
+                <li><strong>Custom Error Handling:</strong> Graceful error management with appropriate HTTP responses.</li>
+                <li><strong>Testing:</strong> Includes unit tests for API endpoints and error handling.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Detailed Documentation of `app.py`</h2>
+            <h3 class="subheader">1. Serving `index.html`</h3>
+            <p class="content">
+                The root route (`/`) serves the `index.html` file using `HTMLResponse` from the `static` directory.
+            </p>
+            <pre class="code-block">
+@app.get("/", response_class=HTMLResponse)
+async def main_page():
+    main_html = Path("static/index.html").read_text()
+    return HTMLResponse(content=main_html)
+            </pre>
+
+            <h3 class="subheader">2. Serving a Chat Page</h3>
+            <p class="content">
+                The `/chat` route serves `Welcome-chat.html` to users.
+            </p>
+            <pre class="code-block">
+@app.get("/chat", response_class=HTMLResponse)
+async def chat_page():
+    chat_html = Path("static/Chat's/Welcome-chat.html").read_text()
+    return HTMLResponse(content=chat_html)
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">GPT Chat API Endpoint</h2>
+            <p class="content">
+                The `/gpt4` POST endpoint receives user messages and streams the AI's response.
+            </p>
+            <pre class="code-block">
+class Message(BaseModel):
+    role: str
+    content: str
+
+class Gpt4Request(BaseModel):
+    messages: List[Message]
+    model_type: str
+
+@app.post("/gpt4")
+async def gpt4(request: Gpt4Request):
+    assistant_response = generate(request.messages, request.model_type)
+    return StreamingResponse(assistant_response, media_type='text/event-stream')
+            </pre>
+
+            <h3 class="subheader">Error Handling in Chat API</h3>
+            <p class="content">
+                Errors like `Timeout`, `RateLimitError`, etc., are caught and returned with clear error messages:
+            </p>
+            <pre class="code-block">
+except Exception as e:
+    yield f"{type(e).__name__}: {str(e)}"
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Testing</h2>
+            <h3 class="subheader">1. Mocking OpenAI Responses</h3>
+            <p class="content">
+                A mocked response simulates OpenAI's output for testing the `/gpt4` endpoint.
+            </p>
+            <pre class="code-block">
+@pytest.mark.asyncio
+async def test_endpoint():
+    with patch('openai.resources.chat.Completions.acreate', new_callable=AsyncMock) as mock_acreate:
+        mock_acreate.return_value = MockResponse()
+        response = client.post("/gpt4", json={
+            'messages': [{'role': 'user', 'content': 'Hello'}],
+            'model_type': 'gpt-3.5-turbo'
+        })
+        assert response.status_code == 200
+        assert response.content.decode() == 'Hello, world!'
+            </pre>
+
+            <h3 class="subheader">2. Testing Error Handling</h3>
+            <p class="content">
+                Parameterized tests verify that all supported errors are handled gracefully:
+            </p>
+            <pre class="code-block">
+@pytest.mark.parametrize('error_type,error_message', error_types_and_messages)
+@pytest.mark.asyncio
+async def test_OpenAIError(error_type, error_message):
+    with patch('openai.resources.chat.Completions.acreate', new_callable=AsyncMock, side_effect=error):
+        response = client.post("/gpt4", json={...})
+        assert response.content.decode() == f'{error_type.__name__}: {error_message}'
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Running the Server</h2>
+            <p class="content">
+                To start the server:
+            </p>
+            <pre class="code-block">
+uvicorn app:app --host 0.0.0.0 --port 8001 --reload
+            </pre>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Accessing the Application</h2>
+            <ul class="content">
+                <li>Visit the root endpoint: <code>http://127.0.0.1:8001/</code> to load `index.html`.</li>
+                <li>Visit <code>/chat</code> to load `Welcome-chat.html`.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Advanced Features</h2>
+            <h3 class="subheader">1. Using `.env` File for API Keys</h3>
+            <p class="content">
+                The API key is securely loaded from the `.env` file:
+            </p>
+            <pre class="code-block">
+load_dotenv()
+aclient = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+            </pre>
+
+            <h3 class="subheader">2. Future Extensions</h3>
+            <ul class="content">
+                <li>Dynamic HTML Rendering: Use `Jinja2` templates for server-side rendering.</li>
+                <li>Authentication: Add user authentication to protect the chat API.</li>
+                <li>Static Assets: Include CSS, JS, or images in the `/static` directory for enhanced UI.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-header">Environment Setup</h2>
+            <h3 class="subheader">1. Install dependencies:</h3>
+            <pre class="code-block">
+pip install fastapi uvicorn openai python-dotenv pytest
+            </pre>
+
+            <h3 class="subheader">2. Create a `.env` file for API keys:</h3>
+            <pre class="code-block">
+OPENAI_API_KEY=your-api-key-here
+            </pre>
+        </div>
+
+
+
+
+
+
+        <div class="container">
+            <h1>Frontend Integration Guide: React & FastAPI Backend</h1>
+    
+            <h2>Overview</h2>
+            <p>In this guide, we’ll explain how to integrate your React frontend with the FastAPI backend server. The React
+                app will make HTTP requests to the FastAPI server to fetch the necessary data and display it to the user.</p>
+    
+            <h3>Assumptions</h3>
+            <ul>
+                <li>You already have a React frontend set up and working.</li>
+                <li>The FastAPI backend server (provided in the initial code) is running separately.</li>
+            </ul>
+    
+            <h2>Step-by-Step Integration</h2>
+    
+            <h3>1. Setup Axios or Fetch in React</h3>
+            <p>To communicate with the FastAPI backend, you can use either the <code>axios</code> library or the built-in <code>fetch</code> function.</p>
+    
+            <h4>Option A: Using Axios</h4>
+            <p>Install <code>axios</code> if you haven’t already:</p>
+            <pre class="code-block">
+    npm install axios
+            </pre>
+            <p>Create an Axios instance for easier API requests:</p>
+            <pre class="code-block">
+    import axios from 'axios';
+    
+    const instance = axios.create({
+        baseURL: 'http://127.0.0.1:8001', // FastAPI server URL
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    
+    export default instance;
+            </pre>
+    
+            <h4>Option B: Using Fetch</h4>
+            <p>Alternatively, if you prefer using <code>fetch</code>, there’s no need to install anything. You can use it directly like this:</p>
+            <pre class="code-block">
+    const fetchAPI = async (url, options = {}) => {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            throw new Error('API request failed');
+        }
+        return response.json();
+    };
+            </pre>
+    
+            <h3>2. Making Requests from React</h3>
+    
+            <h4>A. Request to Load HTML Pages (Optional)</h4>
+            <p>If you want to load the static HTML pages (<code>index.html</code>, <code>chat.html</code>), you can use Axios or Fetch to request the pages.</p>
+            <pre class="code-block">
+    import axios from './api/axios';  // or use fetch() if preferred
+    
+    const loadIndexPage = async () => {
+        try {
+            const response = await axios.get('/');
+            document.getElementById('root').innerHTML = response.data;
+        } catch (error) {
+            console.error('Error loading index page:', error);
+        }
+    };
+            </pre>
+    
+            <h4>B. Request to Chat API (<code>/gpt4</code> endpoint)</h4>
+            <p>For the chat functionality, make a POST request to the <code>/gpt4</code> endpoint, passing the required data (messages).</p>
+            <p>Example using Axios:</p>
+            <pre class="code-block">
+    import axios from './api/axios';
+    
+    const sendMessage = async (messages, modelType = 'gpt-3.5-turbo') => {
+        try {
+            const response = await axios.post('/gpt4', {
+                messages: messages,
+                model_type: modelType,
+            }, { responseType: 'stream' });
+    
+            // Handle streamed response here
+            response.data.on('data', chunk => {
+                const message = chunk.toString();
+                console.log('Streamed message:', message);
+                // Append the response to your UI
+            });
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+    };
+            </pre>
+    
+            <p>Example using <code>fetch</code>:</p>
+            <pre class="code-block">
+    const sendMessage = async (messages, modelType = 'gpt-3.5-turbo') => {
+        try {
+            const response = await fetch('http://127.0.0.1:8001/gpt4', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ messages, model_type: modelType }),
+            });
+    
+            if (response.ok) {
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let done = false;
+                let message = '';
+    
+                while (!done) {
+                    const { value, done: readerDone } = await reader.read();
+                    done = readerDone;
+                    message += decoder.decode(value, { stream: true });
+                    console.log('Streamed message:', message);
+                    // Append the response to your UI
+                }
+            }
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+    };
+            </pre>
+    
+            <h3>3. Handling Responses in React</h3>
+            <p>Since the <code>/gpt4</code> endpoint streams the response, the frontend needs to handle this stream.</p>
+            <pre class="code-block">
+    import { useState } from 'react';
+    
+    const ChatApp = () => {
+        const [messages, setMessages] = useState([]);
+        const [inputMessage, setInputMessage] = useState('');
+    
+        const sendChatMessage = async () => {
+            const newMessage = { role: 'user', content: inputMessage };
+            const newMessages = [...messages, newMessage];
+            setMessages(newMessages);
+    
+            try {
+                await sendMessage(newMessages);
+            } catch (error) {
+                console.error('Error sending message:', error);
+            }
+    
+            setInputMessage('');
+        };
+    
+        <!-- return (
+            <div>
+                <div id="chat-box">
+                    {messages.map((msg, index) => (
+                        <p key={index}>{msg.role}: {msg.content}</p>
+                    ))}
+                </div>
+                <input
+                    type="text"
+                    value={inputMessage}
+                    onChange={(e) => setInputMessage(e.target.value)}
+                />
+                <button onClick={sendChatMessage}>Send</button>
+            </div>
+        );
+    }; -->
+            </pre>
+    
+            <h3>4. Error Handling</h3>
+            <p>Make sure to implement error handling in your React components for a smooth user experience.</p>
+            <pre class="code-block">
+    const sendMessage = async (messages, modelType = 'gpt-3.5-turbo') => {
+        try {
+            const response = await axios.post('/gpt4', { messages, model_type: modelType });
+            // Process the response
+        } catch (error) {
+            alert('Failed to send message. Please try again.');
+            console.error(error);
+        }
+    };
+            </pre>
+    
+            <h3>5. CORS Configuration on Backend</h3>
+            <p>Since React and FastAPI will likely run on different ports during development, make sure <strong>CORS</strong> (Cross-Origin Resource Sharing) is enabled in the FastAPI backend to allow requests from your frontend.</p>
+    
+            <pre class="code-block">
+    from fastapi.middleware.cors import CORSMiddleware
+    
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # Allow all origins for development purposes (use specific origins in production)
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+            </pre>
+    
+            <h3>6. Testing the Integration</h3>
+            <p>After setting up everything:</p>
+            <ol>
+                <li>Run the FastAPI server: <pre class="code-block">uvicorn app:app --host 0.0.0.0 --port 8001 --reload</pre></li>
+                <li>Run your React app: <pre class="code-block">npm start</pre></li>
+                <li>Open the browser and test the chat functionality by sending messages from the React frontend. The backend should stream the response back to the frontend.</li>
+            </ol>
+        </div>
+
+
+
+
+
+        <div class="container">
+            <h1>Frontend Developer Resources for Integrating FastAPI with React</h1>
+        
+            <div id="resource-list">
+                <!-- Section 1: FastAPI Backend Endpoint -->
+                <h2>1. FastAPI Backend Endpoint</h2>
+                <ul>
+                    <li><strong>Endpoint for Chat API:</strong></li>
+                    <ul class="code-block">
+                        <li><strong>URL:</strong> `http://127.0.0.1:8001/gpt4`</li>
+                        <li><strong>Method:</strong> `POST`</li>
+                        <li><strong>Request Payload:</strong>
+                            <div class="code">
+                                {
+                                    "messages": [{"role": "user", "content": "Hello, how are you?"}],
+                                    "model_type": "gpt-3.5-turbo"  // (Optional: Default is gpt-3.5-turbo)
+                                }
+                            </div>
+                        </li>
+                        <li><strong>Response:</strong> Streams AI-generated messages (received in chunks).</li>
+                    </ul>
+                </ul>
+        
+                <!-- Section 2: FastAPI Static File Endpoint -->
+                <h2>2. FastAPI Static File Endpoint</h2>
+                <ul>
+                    <li><strong>Endpoint for serving static `index.html`:</strong></li>
+                    <ul class="code-block">
+                        <li><strong>URL:</strong> `http://127.0.0.1:8001/` (serves `index.html`)</li>
+                        <li><strong>Method:</strong> `GET`</li>
+                        <li><strong>Response:</strong> HTML content of the `index.html` file.</li>
+                    </ul>
+                </ul>
+        
+               
+            </div>
+        </div>
+        
+
+
+
+
+
+        <footer class="footer">
+            <p>Server Setup and Documentation</p>
+        </footer>
+    </div>
+
+</body>
+</html>
